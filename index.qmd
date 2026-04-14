@@ -1,0 +1,70 @@
+---
+title: "Sritanya Suresh Andal"
+subtitle: "MSc Business Analytics · Dublin City University"
+pagetitle: "Sritanya Suresh Andal - Portfolio"
+image: images/profile.svg
+image-alt: "Portrait placeholder for Sritanya Suresh Andal"
+description-meta: |
+  Portfolio of Sritanya Suresh Andal - MSc Business Analytics at Dublin City University.
+  Data, strategy, and the people behind every decision.
+about:
+  template: trestles
+  image-width: 18em
+  image-shape: round
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/sritanyasureshandal
+      target: _blank
+    - icon: github
+      text: GitHub
+      href: https://github.com/sritanya
+      target: _blank
+    - icon: envelope
+      text: Email
+      href: "mailto:sritanyaandalsuresh@gmail.com"
+    - icon: file-earmark-person
+      text: CV
+      href: cv/SritanyaSureshAndal_CV.pdf
+      target: _blank
+toc: false
+---
+
+::: {.lede}
+A people-first analyst who turns data into decisions - and decisions into outcomes that actually land with the humans on the receiving end.
+:::
+
+I am completing my **MSc in Business Analytics** at [Dublin City University](https://www.dcu.ie), with a background in Computer Applications and four years of student leadership across 6,000+ peers and 70+ events. My work sits at the intersection of **data, strategy, and people** - from building predictive models for fraud detection and HR analytics, to applying strategic frameworks (PESTLE, Porter's, TOWS, VUCA) to live business cases.
+
+This portfolio collects my projects, my writing, and the arc of the year that is shaping what I do next.
+
+[Explore projects](projects/index.qmd){.btn .btn-primary role="button"}
+[Read the blog](blog/index.qmd){.btn .btn-outline-secondary role="button"}
+
+## What I'm working on
+
+::: {.metric-grid}
+::: {.metric}
+[70+]{.value}
+[Events directed as SU VP]{.label}
+:::
+
+::: {.metric}
+[6,000+]{.value}
+[Students represented]{.label}
+:::
+
+::: {.metric}
+[ROC-AUC 0.76]{.value}
+[IBM HR attrition model]{.label}
+:::
+
+::: {.metric}
+[5]{.value}
+[DCU modules this semester]{.label}
+:::
+:::
+
+## Focus areas
+
+[Data & Analytics]{.pill} [Predictive ML]{.pill} [NLP]{.pill} [Power BI]{.pill} [SQL]{.pill} [Strategic Thinking]{.pill} [UX Research]{.pill} [Event Management]{.pill} [Stakeholder Communication]{.pill}
