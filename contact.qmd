@@ -1,0 +1,80 @@
+---
+title: "Contact & References"
+subtitle: "Reach out, connect, or ask for a referee."
+pagetitle: "Contact - Sritanya Suresh Andal"
+description: "Contact details and professional references for Sritanya Suresh Andal."
+toc: true
+toc-depth: 2
+---
+
+[The short version]{.kicker}
+
+::: {.lede}
+The best way to reach me is email - I answer within a day or two. For professional conversations, LinkedIn works equally well.
+:::
+
+## Get in touch
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+### Direct
+
+- {{< fa regular envelope >}} [sritanyaandalsuresh@gmail.com](mailto:sritanyaandalsuresh@gmail.com)
+- {{< fa solid phone >}} [+353 89 658 8235](tel:+353896588235)
+- {{< fa solid location-dot >}} Dublin, Ireland
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Online
+
+- {{< fa brands linkedin >}} [linkedin.com/in/sritanyasureshandal](https://www.linkedin.com/in/sritanyasureshandal){target="_blank"}
+- {{< fa brands github >}} [GitHub](https://github.com/sritanya){target="_blank"}
+- {{< fa regular file-lines >}} [Download my CV (PDF)](cv/SritanyaSureshAndal_CV.pdf){target="_blank"}
+:::
+:::
+
+::: {.callout-note appearance="simple" icon=false}
+**If you are a recruiter or hiring manager:** I am open to internship and graduate-role conversations in analytics, data science, and product/strategy-adjacent work in the UK and Ireland. Happy to share my CV, a longer portfolio walkthrough, or references on request.
+:::
+
+## What I respond to best
+
+A short message that tells me:
+
+1. Who you are and what you are working on.
+2. Why you think this might be a fit (or why you are curious).
+3. One concrete thing you'd like to discuss or ask.
+
+Short beats polished. I will always write back.
+
+## Professional references
+
+Available on request. If you need a referee, email me with the role you are considering and I will loop in the most relevant of the following, along with an introduction:
+
+| Referee | Context | Availability |
+|---|---|---|
+| Academic supervisor, DCU Business School | MSc Business Analytics - coursework and project work across data management, strategy, and ML modules. | On request |
+| Faculty advisor, Stella Maris College | Bachelor's programme and Students' Union Vice-Presidency - leadership, organisational, and project management work. | On request |
+| Former mentor, Stella Maris Photography & Film-making Club | Operations, team management, and creative direction. | On request |
+
+: Referee availability {.striped .hover tbl-colwidths="[32,52,16]"}
+
+::: {.callout-important appearance="simple" icon=false}
+**A note on privacy:** I list referees by role rather than name here so that my referees are not contacted cold. Please email me first, and I will make a warm introduction.
+:::
+
+## Response expectations
+
+I am a student and I try to keep a healthy boundary around response times. In practice:
+
+- **Email** - within 24–48 hours on weekdays.
+- **LinkedIn DMs** - a few days, sometimes up to a week.
+- **Time-sensitive** - include a deadline in the subject line and I will prioritise.
+
+Thanks for reading this far. I am looking forward to the conversation.
+
+---
+
+::: {style="text-align: center; margin-top: 2.5rem;"}
+[Made with care in Dublin · [source repo](https://github.com/sritanya){target="_blank"}]{.kicker}
+:::
