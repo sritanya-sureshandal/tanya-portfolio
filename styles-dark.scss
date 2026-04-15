@@ -1,0 +1,366 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// -- Brand palette (dark) ---------------------------------------------------
+$ink:          #0B0F14;
+$panel:        #111821;
+$panel-2:      #1A2332;
+$line:         #1F2A3A;
+$text:         #E8EAED;
+$muted:        #9CA3AF;
+$accent:       #7FAE96;   // sage, softer for dark bg
+$accent-soft:  rgba(127, 174, 150, 0.14);
+$highlight:    #F59E0B;
+
+// -- Overrides --------------------------------------------------------------
+$body-bg:                $ink;
+$body-color:             $text;
+$link-color:             $accent;
+$link-hover-color:       lighten($accent, 8%);
+$primary:                $accent;
+$secondary:              $panel-2;
+$light:                  $panel;
+$dark:                   $text;
+$border-color:           $line;
+
+$navbar-bg:              rgba(11, 15, 20, 0.82);
+$navbar-fg:              $text;
+$navbar-hl:              $accent;
+
+$footer-bg:              $panel;
+$footer-fg:              $muted;
+
+// Type
+$font-family-sans-serif: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+$font-family-serif:      'Instrument Serif', Georgia, serif;
+$font-family-monospace:  'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+
+$headings-font-family:   $font-family-serif;
+$headings-font-weight:   400;
+$headings-color:         $text;
+$headings-line-height:   1.15;
+
+$body-font-size:         1.0625rem;
+$body-line-height:       1.7;
+
+$code-bg:                $panel;
+$code-color:             $highlight;
+$pre-bg:                 $panel;
+
+$callout-color-note:     $accent;
+$callout-color-tip:      #60A5FA;
+$callout-color-caution:  $highlight;
+$callout-color-warning:  #FBBF24;
+$callout-color-important:#F87171;
+
+/*-- scss:rules --*/
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-feature-settings: "ss01", "cv02", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.003em;
+  background:
+    radial-gradient(ellipse 1200px 600px at 20% -5%, rgba(127, 174, 150, 0.08), transparent 60%),
+    radial-gradient(ellipse 900px 500px at 95% 5%, rgba(245, 158, 11, 0.05), transparent 60%),
+    $ink;
+}
+
+h1, h2, h3, h4, h5, h6 { letter-spacing: -0.018em; color: $text; }
+h1 { font-size: clamp(2.1rem, 3.6vw + 1rem, 3.4rem); }
+h2 { font-size: clamp(1.55rem, 1.6vw + 1rem, 2.1rem); margin-top: 2.6rem; }
+h3 { font-size: 1.35rem; margin-top: 2rem; }
+
+.quarto-title h1.title,
+#title-block-header h1.title {
+  font-size: clamp(2.3rem, 3.8vw + 1rem, 3.7rem);
+  margin-bottom: 0.4rem;
+}
+
+// ---------- Navbar ----------
+.navbar {
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid $line;
+  background: rgba(11, 15, 20, 0.72) !important;
+  min-height: 66px;
+  height: 66px;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+.navbar .nav-link,
+.navbar .navbar-brand { color: $text !important; }
+.navbar-brand img {
+  max-height: 34px;
+  filter: invert(1) hue-rotate(180deg) brightness(1.05);
+}
+.btn-outline-secondary,
+.btn-outline-primary {
+  color: $text;
+  border-color: rgba(232, 234, 237, 0.35);
+  background: transparent;
+}
+.btn-outline-secondary:hover,
+.btn-outline-primary:hover {
+  background: $accent;
+  border-color: $accent;
+  color: $ink;
+}
+.navbar-nav .nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  padding-inline: 0.95rem !important;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  width: 0;
+  height: 2px;
+  background: $accent;
+  transition: width 220ms ease, left 220ms ease;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 60%;
+  left: 20%;
+}
+
+a { text-decoration: none; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+.content a:not(.btn):not(.nav-link):not(.card-link):not(.anchorjs-link) {
+  text-decoration: underline;
+  text-decoration-color: rgba(127, 174, 150, 0.35);
+}
+.content a:not(.btn):not(.nav-link):not(.card-link):hover {
+  text-decoration-color: $accent;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 0.55rem 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.btn-primary {
+  background-color: $accent;
+  border-color: $accent;
+  color: $ink;
+}
+.btn-primary:hover {
+  background-color: lighten($accent, 5%);
+  border-color: lighten($accent, 5%);
+  color: $ink;
+}
+
+// ---------- About / landing templates ----------
+.quarto-about-jolla,
+.quarto-about-trestles {
+  padding-block: 3.5rem 2rem;
+}
+.quarto-about-jolla .about-image,
+.quarto-about-trestles .about-image {
+  border-radius: 50%;
+  box-shadow:
+    0 20px 45px -18px rgba(0, 0, 0, 0.6),
+    0 0 0 6px $ink,
+    0 0 0 7px rgba(127, 174, 150, 0.35);
+}
+.about-links .about-link {
+  border: 1px solid $line;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $text;
+  background: $panel;
+  transition: all 180ms ease;
+}
+.about-links .about-link:hover {
+  background: $accent;
+  color: $ink;
+  border-color: $accent;
+  transform: translateY(-1px);
+}
+
+// ---------- Cards ----------
+.quarto-grid-item, .card {
+  border: 1px solid $line;
+  border-radius: 14px;
+  overflow: hidden;
+  background: $panel;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+.quarto-grid-item .card-img-top,
+.quarto-grid-item img.thumbnail-image,
+.quarto-listing .thumbnail-image {
+  object-fit: contain !important;
+  object-position: center center;
+  background: $panel-2;
+  padding: 0;
+  width: 100%;
+}
+.quarto-listing-default .thumbnail-image,
+.quarto-post .thumbnail {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  background: $panel-2;
+}
+.quarto-post .thumbnail img,
+.quarto-post img.thumbnail-image {
+  object-fit: contain !important;
+  object-position: center;
+  background: $panel-2;
+  width: 100%;
+  height: auto;
+}
+.quarto-grid-item:hover, .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 40px -22px rgba(0, 0, 0, 0.8);
+  border-color: rgba(127, 174, 150, 0.45);
+}
+.quarto-grid-item .listing-title,
+.quarto-grid-item a.title {
+  font-family: $font-family-serif;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: $text;
+}
+.quarto-grid-item .listing-description {
+  color: $muted;
+}
+.quarto-grid-item .listing-categories .listing-category,
+.quarto-category {
+  background: $accent-soft;
+  color: $accent;
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border: none;
+  margin-right: 0.3rem;
+}
+
+// ---------- Code ----------
+pre, code { font-size: 0.9rem; }
+div.sourceCode, pre.sourceCode {
+  border-radius: 10px;
+  border: 1px solid $line;
+  background: $panel !important;
+}
+code:not(.sourceCode) {
+  padding: 0.1rem 0.4rem;
+  border-radius: 6px;
+  background: $panel;
+  color: $highlight;
+}
+
+// ---------- Callouts ----------
+.callout {
+  border-radius: 12px;
+  border-left-width: 4px;
+  background: $panel;
+}
+
+// ---------- Tables ----------
+table th {
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: $muted;
+  border-bottom: 1.5px solid $text;
+}
+table td { border-bottom: 1px solid $line; }
+
+// ---------- Footer ----------
+.nav-footer {
+  background: $panel !important;
+  color: $muted;
+  font-size: 0.88rem;
+  padding-block: 1.75rem;
+  border-top: 1px solid $line;
+}
+.nav-footer a { color: $muted; }
+.nav-footer a:hover { color: $accent; }
+
+// ---------- Utility ----------
+.pill {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: $accent-soft;
+  color: $accent;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin: 0.15rem 0.15rem 0.15rem 0;
+}
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: $accent;
+}
+.lede {
+  font-family: $font-family-serif;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: $muted;
+  font-style: italic;
+  margin-block: 1.2rem 1.6rem;
+  border-left: 3px solid $accent;
+  padding-left: 1rem;
+}
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+.metric {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid $line;
+  border-radius: 12px;
+  background: $panel-2;
+}
+.metric .value {
+  font-family: $font-family-serif;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: $accent;
+  display: block;
+}
+.metric .label {
+  font-size: 0.82rem;
+  color: $muted;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.35rem;
+  display: block;
+}
+
+// ---------- TOC ----------
+#TOC { font-size: 0.88rem; }
+#TOC a {
+  color: $muted;
+  border-left: 2px solid transparent;
+  padding-left: 0.75rem;
+}
+#TOC a:hover, #TOC .active { color: $accent; border-left-color: $accent; }
+
+// Theme toggle icon visibility
+.quarto-color-scheme-toggle { color: $text; }
+
+@media (max-width: 768px) {
+  .lede { font-size: 1.15rem; }
+}
