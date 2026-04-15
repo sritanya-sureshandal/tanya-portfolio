@@ -1,0 +1,99 @@
+---
+title: "About"
+subtitle: "Background, skills, and where I am going next."
+pagetitle: "About - Sritanya Suresh Andal"
+description: "About Sritanya Suresh Andal - MSc Business Analytics student at Dublin City University, with a background in computing and four years of student leadership."
+toc: true
+toc-depth: 2
+---
+
+[The long version]{.kicker}
+
+# Who I am
+
+I grew up in **Chennai**, trained in **Computer Applications** at Stella Maris College, and spent four years leading student initiatives that taught me how people, processes, and systems actually behave under pressure. In September 2025 I moved to **Dublin**, switched tracks in my first week of grad school, and began an MSc in **Business Analytics** at Dublin City University.
+
+::: {.lede}
+The shortest honest summary of what I do: I read patterns - in data and in people - and help the two talk to each other.
+:::
+
+## Background
+
+I did not start in analytics. I started in code. A Bachelor of Computer Applications (First Class with Distinction) gave me a solid technical foundation - Python, SQL, algorithms, databases, HCI, mobile development. But the problems that held my attention longest were never the purely technical ones.
+
+They were the human-and-data ones: *why do teams make poor decisions with good data? What does it take to translate insight into change that actually sticks?*
+
+That curiosity is what pulled me toward Business Analytics - and why I switched my master's programme from Computing to Business Analytics in my first week at DCU. [I have written about that decision here.](blog/posts/people-over-code.qmd)
+
+::: {.callout-note appearance="simple"}
+**What I brought with me from computing:** the habit of asking *how* something works, not just whether it does. In a BA cohort, being able to interrogate a model - not just interpret one - is a quietly useful superpower.
+:::
+
+## What I do well
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+### Data & analytics
+- Python (pandas, NumPy, scikit-learn), SQL (PostgreSQL)
+- Classical & predictive ML, NLP, deep learning fundamentals
+- Hypothesis testing, A/B testing, experimental design
+- Power BI, data storytelling, ERD/UML design
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Strategy & business
+- PESTLE · Porter's Five Forces · TOWS · VUCA
+- Business Model Canvas · GTM · pricing models
+- Stakeholder and risk analysis
+- Enterprise Design Thinking (IBM certified)
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Web & product
+- Quarto, HTML, CSS, Sass, Git/GitHub
+- Responsive design, prototyping, UX research
+- User psychology and interface design (HCI foundations)
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Leadership
+- Event planning & operations at institutional scale
+- Cross-functional coordination, stakeholder management
+- Public speaking & cross-cultural collaboration
+- Social media strategy (grew engagement 100×)
+:::
+:::
+
+## How I work
+
+```{mermaid}
+flowchart LR
+    A[Understand the<br/>people & problem] --> B[Find the<br/>right data]
+    B --> C[Interrogate,<br/>don't just run]
+    C --> D[Translate into<br/>a decision]
+    D --> E[Follow it<br/>through]
+    E -.-> A
+    classDef node fill:#D8E4DD,stroke:#2D5F4E,color:#0F172A;
+    class A,B,C,D,E node;
+```
+
+I care a lot about the first and last step of that loop. Most analytics failure modes I have seen live at the edges - either a model was built to answer the wrong question, or the answer was never meaningfully handed back to the people who had to act on it.
+
+## What I am working toward
+
+Short-term, I am focused on shipping this year's MSc well and developing depth in **applied ML for business decisions** - HR analytics, fraud/risk, and customer behaviour are areas I keep returning to. Longer-term, I want to work in a role where I am building the systems *and* sitting in the rooms where decisions get made with them. Analytics + product + strategy - in that order, and closely connected.
+
+::: {.callout-tip appearance="simple" icon=false}
+**Currently exploring:** LLM-assisted analytics workflows, the practical reliability of generative AI in business reporting, and how small teams make high-quality decisions with imperfect data.
+:::
+
+## A few things that are true
+
+- I will always read a research paper before trusting a dashboard.
+- I believe the *question* is usually more expensive than the model.
+- My first language is Tamil; English is a working language I have shaped with effort, and the [clarity I can reach in it is my own](blog/posts/clarity-between-languages.qmd).
+- I took a photograph almost every day for three years as secretary of my college's photography club. It is still how I notice things.
+
+::: {.callout-note icon=false appearance="minimal"}
+**Want to work together, or just chat?** The [contact page](contact.qmd) has everything you need.
+:::

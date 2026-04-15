@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#78350F"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <g font-family="Georgia, serif" fill="#FDFCF9" opacity="0.16">
+    <text x="450" y="120" font-size="72" font-style="italic">clarity</text>
+    <text x="480" y="220" font-size="72" font-style="italic">voice</text>
+    <text x="430" y="320" font-size="72" font-style="italic">thinking</text>
+    <text x="490" y="420" font-size="72" font-style="italic">precision</text>
+  </g>
+  <text x="56" y="140" font-family="Inter, sans-serif" font-size="14" letter-spacing="6" fill="#F59E0B">BLOG · LANGUAGE</text>
+  <text x="56" y="215" font-family="Georgia, 'Instrument Serif', serif" font-size="52" fill="#FDFCF9">Finding Clarity</text>
+  <text x="56" y="275" font-family="Georgia, 'Instrument Serif', serif" font-size="52" fill="#FDFCF9">Between Languages</text>
+</svg>

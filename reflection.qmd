@@ -1,0 +1,109 @@
+---
+title: "Reflection"
+subtitle: "What this module taught me - about the tools, and about myself."
+pagetitle: "Reflection - Sritanya Suresh Andal"
+description: "A reflection on building an e-portfolio with Quarto, Git, GitHub Pages, Python and Sass - and the skills underneath the surface."
+toc: true
+toc-depth: 2
+---
+
+[A reflection on the ePortfolio module]{.kicker}
+
+::: {.lede}
+Reflective writing is deceptively difficult. It asks you to be honest about your own thinking - which requires precision, not performance. This is my honest attempt at that.
+:::
+
+## What the module actually asked of me
+
+On paper: *build a portfolio with Quarto, Git, and GitHub Pages.* In practice, the module asked something harder - to make something that functions as technical work *and* as a piece of personal communication. Those two requirements pull in different directions more often than I expected.
+
+## What I learned, concretely
+
+### Git and version control
+
+I had used Git before, but always loosely. This is the first project where I have used it properly - small, descriptive commits; a clean `.gitignore`; thinking about history as a working record rather than an afterthought.
+
+The habit that stuck: pausing before each commit to ask *"if someone reads only this line six months from now, will it make sense?"* That question changed how I work.
+
+### Quarto
+
+Quarto was the genuinely new piece for me. It sits somewhere between Markdown and a build system, and what I had to internalise was that *almost every visible property of the site lives in* `_quarto.yml` *or in SCSS*, not in the page content itself.
+
+The learning curve was less about syntax than about separation of concerns:
+
+::: {.callout-tip appearance="simple"}
+**Biggest realisation:** In Quarto, you don't style the page. You style the *system*, and the page inherits. Once that clicked, I stopped fighting the tool.
+:::
+
+Specific wins:
+
+- Got a light/dark theme toggle working cleanly by supplying two SCSS files to `format: html: theme`.
+- Used a `listing:` configuration to build the projects and blog indexes automatically from frontmatter - no hand-wiring of card layouts.
+- Enabled `freeze: auto` so executed Python results survive re-rendering without re-running every time.
+
+### Python in the page
+
+I had written Python and I had written websites, but never written Python *inside* a page that would publish itself. Quarto's `{python}` code chunks ended that separation. The fraud-detection and attrition project pages on this site are live notebooks - the tables, confusion matrices, and charts you see are produced at render time from code that is visible alongside them.
+
+The discipline this forces is useful: the code has to be **clean enough to read**, not just clean enough to run. I spent more time naming variables and factoring cells on this project than on any previous ML assignment.
+
+### Sass and visual systems
+
+Sass was the surprise. I understood CSS, but writing CSS at scale - consistent spacing, a cohesive palette, behaviour across light and dark modes - is where `$variables` stop being a curiosity and start being the point.
+
+The palette I settled on (a warm cream and deep sage, with amber for emphasis) is deliberate. It is not a default template's defaults. Choosing it required me to stop and ask what the portfolio should *feel* like, which is not a question I had previously thought to answer.
+
+### GitHub Pages
+
+The deployment piece was smaller than I expected but sharper than I expected. Publishing through the `docs/` folder means I had to render locally and commit the output. Small mistakes - forgetting `.nojekyll`, an unresolved relative path - break the live site in ways the local preview never catches.
+
+## What I learned, less concretely
+
+### Silence is never neutral
+
+I wrote about this in my [blog post on the sunk cost fallacy](blog/posts/sunk-cost-fallacy.qmd). A group project this semester taught me that sitting quietly to avoid disruption is its own kind of decision, and often the wrong one. The same applies to this portfolio: every choice I didn't make left a default in place, and defaults are rarely neutral either.
+
+### The question is more expensive than the model
+
+Every project on this site taught me the same lesson from a different angle. In fraud detection, the right *feature importance analysis* mattered more than the best *classifier*. In the attrition work, the useful output was not the model; it was the retention recommendations the model justified.
+
+### English as a working language
+
+Building a public-facing portfolio in English as a second language is its own quiet effort. I wrote about it [here](blog/posts/clarity-between-languages.qmd). Writing for this site forced me to choose between precision and performance, and I kept choosing precision. That choice is visible in everything on this site, for anyone looking for it.
+
+## What I did not get to
+
+Being honest is part of the brief. A few things I wanted to add and did not:
+
+- [ ] An interactive Plotly dashboard for one of the projects (deferred - kept the baseline clean first)
+- [ ] A dedicated analytics project using DCU's industry challenge dataset (still under NDA, so could not publish)
+- [ ] A proper accessibility audit with axe-core (planned for the next iteration)
+
+These are on the backlog, not the cutting-room floor.
+
+## How this connects to what comes next
+
+This portfolio is not the end of a module for me. It is the first version of the public artifact I will carry into the next two years - internship applications, graduate roles, eventually a working professional presence. The decisions I made here about tone, visual identity, and how to present technical work are decisions I will keep refining.
+
+More usefully, the *habits* the module forced on me - small commits, reproducible code, style as a system rather than a patch, reflection as a discipline - are habits I want to keep.
+
+::: {.callout-note appearance="minimal" icon=false}
+If one sentence has to carry this reflection: **the skills matter, but the habit of working thoughtfully with them matters more.** This module taught me both, and I can tell the difference now.
+:::
+
+## Self-assessment against the rubric
+
+| Criterion | Honest self-assessment |
+|---|---|
+| Git and version control | Incremental commits with descriptive messages; `.gitignore` in place from day one. |
+| Project setup & deployment | `_quarto.yml` configured with dual theme, custom navbar, footer, favicon, logo; folder structure matches the recommended layout. |
+| Required pages | Landing (trestles template), about, projects grid, blog, reflection, contact, CV linked externally. |
+| Python projects | Three projects with active `{python}` chunks, `code-fold`, `code-tools`, `fig-cap`, and interactive Plotly charts. |
+| Design & styling | Bootswatch (cosmo light / darkly dark) + custom SCSS with Google Font import, cohesive palette, and dark/light toggle. |
+| Markdown & multimedia | Callouts, tables, footnotes, Mermaid diagrams, equations, task lists, FontAwesome-style Bootstrap icons, custom divs. |
+| Reflection | This page. |
+| Writing & professionalism | Proofread throughout; external work cited where used; tone is consistent across pages. |
+
+: Self-assessment against the module rubric {.striped .hover tbl-colwidths="[32,68]"}
+
+[Built with care in Dublin.]{.kicker}
