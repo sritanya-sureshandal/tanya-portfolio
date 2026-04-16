@@ -1,4 +1,4 @@
-# Sritanya Suresh Andal - ePortfolio
+# Sritanya Suresh Andal - ePortfolio Page
 
 Personal portfolio built with [Quarto](https://quarto.org), published via GitHub Pages from the `docs/` folder.
 
