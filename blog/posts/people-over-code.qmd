@@ -1,0 +1,56 @@
+---
+title: "Why I Chose People Over Code"
+description: "I did not leave Computing behind. I brought it with me and put it in service of something bigger - understanding how people and organisations actually work."
+author: "Sritanya Suresh Andal"
+date: "2025-09-28"
+date-format: "D MMMM YYYY"
+image: ../../images/blog-people.svg
+image-alt: "Decorative illustration about connected people"
+categories: [Career, Reflection]
+reading-time: true
+toc: false
+---
+
+[Essay · September 2025]{.kicker}
+
+::: {.lede}
+When people ask why I switched from Computing to Business Analytics, the efficient answer is true. The more honest one is simpler and harder to explain in a sentence.
+:::
+
+When people ask why I switched from Computing to Business Analytics, I sometimes give the efficient answer: *broader career options, interest in data, the intersection of technology and strategy.* All of that is true. But the more honest answer is simpler and harder to explain in a sentence.
+
+**I wanted to work with people, not just systems.**
+
+## What three years of Computing actually taught me
+
+I spent three years studying Computer Applications - building things, debugging things, learning the internal logic of machines. I was good at it. I genuinely enjoyed the problem-solving dimension. But I kept noticing that the problems I found most interesting were not technical problems. They were human ones:
+
+- Why do organisations make poor decisions despite having good data?
+- Why do teams fail even when everyone is individually competent?
+- What does it actually take to translate an insight into a change that sticks?
+
+Those questions pulled me in a different direction.
+
+## The turning point I did not recognise
+
+My year as VP of the Students' Union was the turning point I did not recognise until later. I was coordinating 70+ events, representing thousands of students, navigating institutional relationships - and **none of the skills that mattered most were technical**. They were strategic, communicative, and human.
+
+I was doing data-adjacent work constantly: reading patterns in student feedback, assessing what was working, making decisions under incomplete information. But I was doing it in service of *people* and *outcomes*, not systems.
+
+## The one-week decision
+
+By the time I landed in Dublin, I was enrolled in a Masters in Computing. **I switched majors in the first week.**
+
+That sounds impulsive. It was not. Something about being in a new country, in a new classroom, looking at the next year ahead of me made it suddenly very clear that I did not want to go further into pure computing. I wanted the intersection - where data meets decision-making, where analysis meets strategy, where the technical and the human have to work together. Business Analytics felt like exactly that. So I made the call, early, before I had time to talk myself out of it.
+
+## What I was afraid of - and what I found
+
+Switching came with its own anxiety. I walked into my new programme worried I would be the odd one out: the tech person in a room full of business-fluent peers, my background showing in the wrong ways.
+
+What I found instead is that it showed in the **right** ones. I can build the models, interrogate the data, ask the questions that get skipped among frameworks.
+
+::: {.callout-note appearance="simple" icon=false}
+I did not leave Computing behind. I brought it with me and put it in service of something bigger: understanding how people and organisations actually work, and how good analysis can help them work better.
+:::
+
+That is still what drives me.

@@ -1,0 +1,52 @@
+---
+title: "Finding Clarity Between Languages"
+description: "Fluency and ease are not the same thing. On precision, rigour, and why non-native speakers rarely get to be lazy with words."
+author: "Sritanya Suresh Andal"
+date: "2025-12-08"
+date-format: "D MMMM YYYY"
+image: ../../images/blog-languages.svg
+image-alt: "Typographic illustration about working between languages"
+categories: [Personal, Language, Reflection]
+reading-time: true
+toc: false
+---
+
+[Essay · December 2025]{.kicker}
+
+::: {.lede}
+Tamil is my first language - the one I think in when I am trying to be precise.
+:::
+
+I have spoken English for most of my life: in school, in university, in professional settings. By conventional measures, I am fluent. But fluency and ease are not the same thing. There is a layer of effort that native speakers never have to apply - a small but constant background tax on every conversation where the stakes feel high.
+
+## The tax gets heavier
+
+When I began my MSc at DCU, that tax felt heavier than usual. The academic environment is built for verbal participation: discussions, group work, presentations. Every contribution is visible. I noticed immediately that I was **monitoring myself more than I was engaging** - choosing words carefully, second-guessing phrasing, worrying that an accent or an awkward sentence construction would be read as a lack of intelligence rather than what it was: a second language in active use.
+
+## The VR session that cracked it open
+
+The first real crack in that anxiety came during a **VR simulation** in my Strategic Thinking module. The session involved roleplaying corporate scenarios - one required me to convince a Lead Strategist to pause a project because the underlying data was flawed; another to argue as HR against a senior manager who was overreacting to negative employee feedback.
+
+Both scenarios put me in the position of disagreeing with authority, in English, in real time, with no script.
+
+I was nervous going in. I expected to feel exposed - by my accent, by the gap between what I wanted to say and what I could reach for quickly. What happened instead surprised me. Once I focused on the *argument* rather than the *language*, something shifted. I was not performing English anymore. I was using it.
+
+Grounding my points in data and evidence meant I did not need an extensive vocabulary - but a clearer one. And the clarity, I was finding, was something I could do.
+
+## The deeper shift - in writing
+
+The deeper shift came later, while writing my reflective journal. Reflective writing is deceptively difficult. It asks you to be honest about your own thinking, which requires precision - not performance, not sophistication, just precision.
+
+Writing in English for the journal, I found I was not translating myself. I was **thinking directly onto the page**. The discipline of searching for the exact word to describe a feeling or a moment, rather than reaching for the closest approximation in Tamil, sharpened my thinking rather than limiting it. The constraint became a tool.
+
+::: {.callout-note appearance="simple" icon=false}
+**What I had been calling a disadvantage was also a practice.** Non-native speakers learn to choose words carefully because we cannot afford to be lazy with them. That carefulness is, in its own way, a form of rigour.
+:::
+
+## Where I stand now
+
+The challenges of being an ESL speaker in a native-English academic environment are real and they accumulate. But I have stopped framing my English as something that needs to catch up. It is a working language I have shaped through effort, and the clarity I can reach in it is genuinely my own.
+
+The VR session showed me how I could use it under pressure. The journal showed me I could use it to think.
+
+Both mattered.

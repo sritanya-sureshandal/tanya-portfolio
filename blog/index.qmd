@@ -1,0 +1,28 @@
+---
+title: "Blog"
+subtitle: "Essays on leadership, transitions, language, and learning to think with data."
+pagetitle: "Blog - Sritanya Suresh Andal"
+description: "Personal essays by Sritanya Suresh Andal on leadership, moving to Dublin, working between languages, and building an e-portfolio."
+listing:
+  id: posts
+  contents: posts
+  type: default
+  sort: "date desc"
+  fields: [image, date, title, description, categories, reading-time]
+  categories: true
+  sort-ui: [date, title]
+  filter-ui: true
+  feed: true
+  page-size: 10
+  image-height: 200px
+toc: false
+---
+
+[Writing, mostly to think clearly.]{.kicker}
+
+::: {.lede}
+I write to notice what I have learned. These posts track the year - the year I moved countries, switched programmes, and built the rest of this site. They are personal, and they are true.
+:::
+
+::: {#posts}
+:::

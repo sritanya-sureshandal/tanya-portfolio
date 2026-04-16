@@ -1,0 +1,42 @@
+---
+title: "Moving to Dublin"
+description: "I had imagined the flight. I had not imagined Sunday. A note on the interior side of moving abroad for a postgraduate degree."
+author: "Sritanya Suresh Andal"
+date: "2025-10-12"
+date-format: "D MMMM YYYY"
+image: ../../images/blog-dublin.svg
+image-alt: "Stylised Dublin skyline illustration"
+categories: [Personal, Transition]
+reading-time: true
+toc: false
+---
+
+[Essay · October 2025]{.kicker}
+
+::: {.lede}
+I had imagined the flight. I had not imagined Sunday.
+:::
+
+The first Sunday I spent alone in Dublin, I had no plans, no obligations, and nobody waiting for me. Back home in Chennai, that would have been unthinkable. There was always something - family, noise, an errand, a friend dropping by. Life in Chennai happened around you whether you invited it or not. Dublin asked me what I *actually* wanted to do, and I did not have an answer.
+
+## The psychological move
+
+I moved to Ireland in September 2025 to begin my Masters at Dublin City University. I was prepared practically. I had my accommodation sorted, modules researched, a rough map of the city memorised. What I had not prepared for was the **psychological shift** of being entirely, structurally alone for the first time in my life.
+
+In India, my independence was negotiated. It existed within a network of relationships, expectations, and shared rhythms. I was independent *within* a system that held me. In Dublin, I was outside any system that had previously held me. Nobody knew my name. Nobody had any expectations. It was freeing and disorienting in an equal measure.
+
+## A different classroom
+
+The academic culture added another layer of adjustment. In Ireland, students are expected to speak up, challenge ideas, and participate visibly in their own learning. I came from an educational background where the opposite was often true - where knowing the answer and staying quiet was often safer than volunteering and risking being wrong.
+
+DCU's classrooms felt like a different game with different rules, and I had to **unlearn and relearn** how to play.
+
+::: {.callout-tip appearance="simple" icon=false}
+**The unexpected gift.** Dublin is quieter than I expected - walkable, unhurried, genuinely friendly in a low-key way that took time to read. I started to find rhythms: a coffee shop near campus, a walk along the canal, the strange comfort of grey skies I am learning to stop resenting.
+:::
+
+## Finding myself, differently
+
+Without the infrastructure of home - family nearby, a familiar language on every street, people who knew my history - I had to figure out what I actually thought, what I actually needed, who I actually was without context. That process is uncomfortable. It is also one of the most clarifying things I have ever done.
+
+Moving abroad for a postgraduate degree is often framed as an adventure. It is. And it is also a slow, unglamorous process of becoming more honest with yourself. The independence Dublin gave me was not just logistical - it was **interior**. And that is the kind that stays.

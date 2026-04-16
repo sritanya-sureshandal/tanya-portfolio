@@ -1,0 +1,44 @@
+---
+title: "What Being VP Taught Me About Leadership"
+description: "A year of representing 6,000 students and directing 70+ events taught me that leadership is less about being indispensable and more about making others feel they are."
+author: "Sritanya Suresh Andal"
+date: "2024-04-15"
+date-format: "D MMMM YYYY"
+image: ../../images/blog-vp.svg
+image-alt: "Decorative illustration for a blog post about student leadership"
+categories: [Leadership, Reflection]
+reading-time: true
+toc: false
+---
+
+[Essay · April 2024]{.kicker}
+
+::: {.lede}
+The numbers look clean on a CV. The reality was messier, louder, and far more human.
+:::
+
+I did not fully understand what I had signed up for when I stood for election as Vice-President of the Students' Union at Stella Maris College. I had been on the Core Committee before, managed social media, planned events. I thought I knew the job. What I did not anticipate was how much it would change the way I understand people and myself.
+
+As VP, I represented over **6,000 students** in administrative discussions, directed **70+ events** across the academic year, and co-founded **Converge 360**, an annual youth leadership symposium that brought together student leaders from across institutions. The numbers look clean on a CV. The reality was messier, louder, and far more human.
+
+## The moment that shifted something
+
+The moment that shifted something in me came not during a large event or a high-stakes meeting, but in a quieter one. A student I had barely spoken to before came to me with a concern - not a formal complaint, not an official grievance, just a worry. She chose to tell me because, she said, she trusted that I would actually do something about it.
+
+I remember sitting with that sentence long after she left. *She trusted me. Not the position. Me.*
+
+That is the thing about leadership roles that nobody quite prepares you for: people extend trust before you have had the chance to earn it in the way you expect to. They trust the version of you they believe you can be. That is both a gift and a responsibility that carries real weight.
+
+## The quieter model
+
+I had grown up in an environment where leadership was performed - measured in visibility, in titles, in being seen to do the right thing. My year as VP slowly replaced that model with something quieter.
+
+Leadership, I came to understand, is the **quality of the environment you create** for the people around you. It is whether someone feels safe enough to walk up to you with a worry. It is whether your team can disagree with you. It is the space between the events - the conversations, the follow-throughs, the moments nobody photographs.
+
+::: {.callout-note appearance="simple" icon=false}
+**The discovery about delegation.** I also learned the hard way that trying to carry everything yourself is not strength. Delegation felt like relinquishing control initially, but I learned it was actually an act of trust in the people around you, and in the process itself. The events I am most proud of were not the ones I managed most tightly. They were the ones where I gave my team room to own something.
+:::
+
+## What I carry forward
+
+The Students' Union Leadership Award I received at the end of the year meant a great deal to me. But what I carry forward is not the award. It is the understanding that leadership is not about being indispensable - it is about **making others feel that they are**.

@@ -1,0 +1,52 @@
+---
+title: "The Sunk Cost Fallacy in Projects"
+description: "On group-project paralysis, the difference between understanding a bias and feeling one, and what silence costs when it looks like neutrality."
+author: "Sritanya Suresh Andal"
+date: "2025-11-24"
+date-format: "D MMMM YYYY"
+image: ../../images/blog-sunkcost.svg
+image-alt: "Two diverging trend lines representing decision options"
+categories: [Decision-Making, Reflection]
+reading-time: true
+toc: false
+---
+
+[Essay · November 2025]{.kicker}
+
+::: {.lede}
+There is a particular kind of group-project paralysis that has nothing to do with laziness or poor planning. It is the paralysis of *investment*.
+:::
+
+There is a particular kind of group-project paralysis that has nothing to do with laziness or poor planning. It is the paralysis of investment - the moment a team looks at weeks of work and decides, collectively and quietly, that undoing any of it would be too costly to contemplate.
+
+I encountered this during a strategy group project at DCU, and watching it unfold from the inside taught me more about decision-making than any case study has.
+
+## The moment the framework became a feeling
+
+Our group had developed a set of strategic models over several weeks. We had invested real time in them - late nights, multiple iterations, long discussions. When we received feedback from our professor indicating that the models needed significant rework rather than refinement, the team's first instinct was not to redo them but to defend what we had built and find ways to adjust around the edges.
+
+I recognised what was happening. We had learned about the **sunk cost fallacy** in our Strategic Thinking module - the cognitive bias where people continue investing in something because of what has already been spent, rather than evaluating what is actually the best path forward.
+
+I had understood it as a *concept*. Sitting in that group conversation, I understood it as a *feeling*.
+
+## Why the pull feels so rational
+
+The pull to protect past effort is strong, and it feels rational. It disguises itself as pragmatism - *"we've come too far to start over," "there's something worth salvaging here."* In reality, it is the past making decisions about the future, which is rarely a sound strategy.
+
+## Silence is never neutral
+
+I said something. That was new for me. I had spent much of the early semester staying quiet in group settings to avoid disruption. But I had also spent those weeks learning, in my Strategic Thinking module, that **silence is never neutral**. It is a choice with consequences.
+
+I said, as directly as I could, that I thought we were letting our time investment cloud our judgement about what the project actually needed. I suggested we use the existing models as a reference point rather than a foundation - and that we build something new, informed by what we had learned in the process of building what did not work.
+
+The group reconsidered. We started again, properly. The final submission was substantially stronger than anything we could have produced by just patching the original.
+
+## The habit that stayed
+
+What stayed with me was not the outcome but the moment of **naming it**. Cognitive biases are visible in business case studies and invisible in your own decision-making until you build the habit of looking for them.
+
+::: {.callout-note appearance="simple" icon=false}
+That habit - of pausing to ask whether the pull I am feeling is logic or loss aversion - is one of the more useful things I have developed this year.
+:::
+
+Sunk costs are real. So is the cost of letting them run your future decisions.

@@ -1,0 +1,64 @@
+---
+title: "Building My E-Portfolio"
+description: "Quarto, Git, Sass, and the surprisingly non-technical work of deciding how a portfolio should feel."
+author: "Sritanya Suresh Andal"
+date: "2026-04-15"
+date-format: "D MMMM YYYY"
+image: ../../images/blog-eportfolio.svg
+image-alt: "Illustration of YAML configuration and Python code"
+categories: [Craft, Quarto, Reflection]
+reading-time: true
+toc: false
+---
+
+[Essay · April 2026]{.kicker}
+
+::: {.lede}
+The code, the structure, and the design are all part of how you present your thinking. I did not expect the technical side to be the difficult part - and in some ways, it wasn't.
+:::
+
+I have worked with code enough to be comfortable building things from scratch. I have used VS Code, written HTML, CSS, and JavaScript, and built websites where I controlled every element directly. So when I started working on my e-portfolio, I did not expect the technical side to be the difficult part.
+
+In some ways, it wasn't. The fundamentals were familiar. But the tools I was using - **Quarto, Git, and Sass** - introduced a different way of working that I had not experienced before.
+
+## Quarto, the system
+
+Quarto required a shift in how I thought about building a site. Instead of writing static HTML pages, I was working within a system that combines content, configuration, and rendering. Small decisions in `_quarto.yml` affected the entire structure of the site - navigation, layout, output directories.
+
+Getting everything to work correctly - especially deployment through the `docs/` folder and GitHub Pages - took more attention than I initially expected. When something broke, it was not always obvious whether the issue was in the content, the configuration, or the build process.
+
+## Git, properly
+
+Using Git properly was another adjustment. I have not used GitHub before, and this project required a disciplined approach: committing changes regularly, structuring the repository cleanly, and thinking about version control as part of the workflow rather than an afterthought.
+
+Making meaningful commits and tracking incremental changes made me more aware of how the project was evolving over time.
+
+## Sass, the reason
+
+Sass was different again. I understood CSS, but Sass introduced a level of structure - variables, organisation, reuse - that made styling more systematic.
+
+It felt unfamiliar at first, but once I started defining colour variables, adjusting typography, and separating defaults from custom rules, it became clear why it was part of the requirement. It made consistency easier to maintain across the site.
+
+## The part that was not technical
+
+The technical challenges were manageable. What I did not expect was how much time I would spend on decisions that were not strictly technical.
+
+Because the portfolio was not just functional - it was **representational**. It had to include a lot of elements that were all connected through a coherent navigation system. But beyond meeting those requirements, I found myself thinking about how everything fit together. How someone would move through the site. What they would notice first. What each project page communicated beyond the code itself.
+
+I spent time reorganising content, rewriting descriptions, and adjusting layouts in ways I would not normally prioritise in a typical coding project. Even small things - like how a project was introduced, or how much detail to include - required judgment and iterative editing.
+
+## Writing this reflection
+
+Writing this reflection section made that even more apparent. Explaining what I had built, and what I had learned, forced me to look at my own process more closely. It is one thing to complete a project; it is another to articulate how you approached it and why certain decisions mattered.
+
+## Does it work? Does it represent me?
+
+What this project made clear to me is that building something like this sits somewhere between **technical work and communication**. The code, the structure, and the design are all part of how you present your thinking.
+
+I have done my best to meet all the functional requirements with regard to the pages, the navigation, the deployment, the use of Git, the integration of Python code. But I believe the more important part was understanding how all these pieces come together into something coherent and usable.
+
+::: {.callout-note appearance="simple" icon=false}
+This portfolio is something I will continue to refine. But it is the first time I have built a technical project where the question was not just "does it work?" but also "does it represent me accurately?"
+:::
+
+That distinction made the process more demanding, and more meaningful, than I initially expected.
