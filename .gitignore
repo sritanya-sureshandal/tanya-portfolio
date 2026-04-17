@@ -1,0 +1,48 @@
+# Quarto
+/.quarto/
+_site/
+.Rproj.user
+*_cache/
+*_files/
+/site_libs/
+.jupyter_cache/
+_freeze/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.python-version
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets / local
+.env
+.env.*
+*.key
+*.pem
+
+# Logs
+*.log
+
+# Source assets we don't need to publish
+/assignment_instructions.pdf
+/eportfolio_rubrics.pdf
+/Blog Posts — Sritanya Suresh Andal_E-port.pdf
+/SritanyaSureshAndal_Eport_CV.pdf
+
+**/*.quarto_ipynb
