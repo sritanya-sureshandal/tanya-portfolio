@@ -46,7 +46,7 @@
     "href": "reflection.html#self-assessment-against-the-rubric",
     "title": "Reflection",
     "section": "Self-assessment against the rubric",
-    "text": "Self-assessment against the rubric\n\nSelf-assessment against the module rubric\n\n\n\n\n\n\nCriterion\nHonest self-assessment\n\n\n\n\nGit and version control\nIncremental commits with descriptive messages; .gitignore in place from day one.\n\n\nProject setup & deployment\n_quarto.yml configured with dual theme, custom navbar, footer, favicon, logo; folder structure matches the recommended layout.\n\n\nRequired pages\nLanding (trestles template), about, projects grid, blog, reflection, contact, CV linked externally.\n\n\nPython projects\nThree projects with active {python} chunks, code-fold, code-tools, fig-cap, and interactive Plotly charts.\n\n\nDesign & styling\nBootswatch (cosmo light / darkly dark) + custom SCSS with Google Font import, cohesive palette, and dark/light toggle.\n\n\nMarkdown & multimedia\nCallouts, tables, footnotes, Mermaid diagrams, equations, task lists, FontAwesome-style Bootstrap icons, custom divs.\n\n\nReflection\nThis page.\n\n\nWriting & professionalism\nProofread throughout; external work cited where used; tone is consistent across pages.\n\n\n\nBuilt with care in Dublin."
+    "text": "Self-assessment against the rubric\n\nSelf-assessment against the module rubric\n\n\n\n\n\n\nCriterion\nHonest self-assessment\n\n\n\n\nGit and version control\nIncremental commits with descriptive messages; .gitignore in place from day one.\n\n\nProject setup & deployment\n_quarto.yml configured with dual theme, custom navbar, footer, favicon, logo; folder structure matches the recommended layout.\n\n\nRequired pages\nLanding (trestles template), about, projects grid, blog, reflection, contact, CV linked externally.\n\n\nPython projects\nThree projects with active {python} chunks, code-fold, code-tools, fig-cap, and interactive Plotly charts.\n\n\nDesign & styling\nBootswatch (cosmo light / darkly dark) + custom SCSS with Google Font import, cohesive palette, and dark/light toggle.\n\n\nMarkdown & multimedia\nCallouts, tables, footnotes, Mermaid diagrams, equations, task lists, FontAwesome-style Bootstrap icons, custom divs.\n\n\nReflection\nThis page.\n\n\nWriting & professionalism\nProofread throughout; external work cited where used; tone is consistent across pages.\n\n\n\nMade by Sritanya."
   },
   {
     "objectID": "projects/list/fraud-detection.html",
@@ -130,21 +130,21 @@
     "href": "contact.html#what-i-respond-to-best",
     "title": "Contact & References",
     "section": "What I respond to best",
-    "text": "What I respond to best\nA short message that tells me:\n\nWho you are and what you are working on.\nWhy you think this might be a fit (or why you are curious).\nOne concrete thing you’d like to discuss or ask.\n\nShort beats polished. I will always write back."
+    "text": "What I respond to best\nA short message that tells me:\n\nWho you are and what you are working on.\nWhy you think this might be a fit (or why you are curious).\nOne concrete thing you’d like to discuss or ask.\n\nI will always write back."
   },
   {
     "objectID": "contact.html#professional-references",
     "href": "contact.html#professional-references",
     "title": "Contact & References",
     "section": "Professional references",
-    "text": "Professional references\nAvailable on request. If you need a referee, email me with the role you are considering and I will loop in the most relevant of the following, along with an introduction:\n\nReferee availability\n\n\n\n\n\n\n\nReferee\nContext\nAvailability\n\n\n\n\nAcademic supervisor, DCU Business School\nMSc Business Analytics - coursework and project work across data management, strategy, and ML modules.\nOn request\n\n\nFaculty advisor, Stella Maris College\nBachelor’s programme and Students’ Union Vice-Presidency - leadership, organisational, and project management work.\nOn request\n\n\nFormer mentor, Stella Maris Photography & Film-making Club\nOperations, team management, and creative direction.\nOn request\n\n\n\n\n\n\n\n\n\nA note on privacy: I list referees by role rather than name here so that my referees are not contacted cold. Please email me first, and I will make a warm introduction."
+    "text": "Professional references\nAvailable on request. Please contact me if you would like to speak with any of my referees:\n\nReferee availability\n\n\n\n\n\n\n\nReferee\nContext\nAvailability\n\n\n\n\nFormer Dean of Student Affairs, Stella Maris College\nAcademic performance and Students’ Union Vice-Presidency - leadership, initiative, event management, and overall institutional contribution.\nOn request\n\n\nAssistant Professor, Department of Computer Science, Stella Maris College\nAI/ML projects, research (AI in Education, defect detection), and technical skills across Python, Java, and machine learning.\nOn request\n\n\nAssistant Professor, Department of Computer Science, Stella Maris College\nResearch, data science projects, and leadership roles - problem-solving, innovation, and multidisciplinary contributions.\nOn request\n\n\n\n\n\n\n\n\n\nA note on privacy: I list referees by role rather than name here so that my referees are not contacted cold. Please email me first, and I will make a warm introduction."
   },
   {
     "objectID": "contact.html#response-expectations",
     "href": "contact.html#response-expectations",
     "title": "Contact & References",
     "section": "Response expectations",
-    "text": "Response expectations\nI am a student and I try to keep a healthy boundary around response times. In practice:\n\nEmail - within 24–48 hours on weekdays.\nLinkedIn DMs - a few days, sometimes up to a week.\nTime-sensitive - include a deadline in the subject line and I will prioritise.\n\nThanks for reading this far. I am looking forward to the conversation.\n\n\nMade with care in Dublin · source repo"
+    "text": "Response expectations\nI am a student and I try to keep a healthy boundary around response times. In practice:\n\nEmail - within 24–48 hours on weekdays.\nLinkedIn DMs - a few days, sometimes up to a week.\nTime-sensitive - include a deadline in the subject line and I will prioritise.\n\nThanks for reading this far. I am looking forward to the conversation.\n\n\nMade by Sritanya · source repo"
   },
   {
     "objectID": "blog/posts/sunk-cost-fallacy.html",

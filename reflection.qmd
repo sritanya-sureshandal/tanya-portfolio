@@ -106,4 +106,4 @@ If one sentence has to carry this reflection: **the skills matter, but the habit
 
 : Self-assessment against the module rubric {.striped .hover tbl-colwidths="[32,68]"}
 
-[Built with care in Dublin.]{.kicker}
+[Made by Sritanya.]{.kicker}

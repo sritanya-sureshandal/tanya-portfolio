@@ -45,17 +45,17 @@ A short message that tells me:
 2. Why you think this might be a fit (or why you are curious).
 3. One concrete thing you'd like to discuss or ask.
 
-Short beats polished. I will always write back.
+I will always write back.
 
 ## Professional references
 
-Available on request. If you need a referee, email me with the role you are considering and I will loop in the most relevant of the following, along with an introduction:
+Available on request. Please contact me if you would like to speak with any of my referees:
 
 | Referee | Context | Availability |
 |---|---|---|
-| Academic supervisor, DCU Business School | MSc Business Analytics - coursework and project work across data management, strategy, and ML modules. | On request |
-| Faculty advisor, Stella Maris College | Bachelor's programme and Students' Union Vice-Presidency - leadership, organisational, and project management work. | On request |
-| Former mentor, Stella Maris Photography & Film-making Club | Operations, team management, and creative direction. | On request |
+| Former Dean of Student Affairs, Stella Maris College | Academic performance and Students’ Union Vice-Presidency - leadership, initiative, event management, and overall institutional contribution. | On request |
+| Assistant Professor, Department of Computer Science, Stella Maris College | AI/ML projects, research (AI in Education, defect detection), and technical skills across Python, Java, and machine learning. | On request |
+| Assistant Professor, Department of Computer Science, Stella Maris College | Research, data science projects, and leadership roles - problem-solving, innovation, and multidisciplinary contributions. | On request |
 
 : Referee availability {.striped .hover tbl-colwidths="[32,52,16]"}
 
@@ -76,5 +76,5 @@ Thanks for reading this far. I am looking forward to the conversation.
 ---
 
 ::: {style="text-align: center; margin-top: 2.5rem;"}
-[Made with care in Dublin · [source repo](https://github.com/sritanya-sureshandal){target="_blank"}]{.kicker}
+[Made by Sritanya · [source repo](https://github.com/sritanya-sureshandal){target="_blank"}]{.kicker}
 :::
