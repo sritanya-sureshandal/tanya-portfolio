@@ -1,0 +1,31 @@
+---
+title: "Projects"
+subtitle: "Applied analytics work - models, strategy, and the reasoning behind them."
+pagetitle: "Projects - Sritanya Suresh Andal"
+description: "A grid of analytical projects covering fraud detection, HR attrition modelling, and strategic analysis under uncertainty."
+listing:
+  id: project-listing
+  contents: list
+  type: grid
+  sort: "date desc"
+  fields: [image, date, title, description, categories]
+  categories: true
+  sort-ui: [title, date]
+  filter-ui: true
+  image-height: 220px
+  grid-columns: 3
+  feed: true
+  page-size: 12
+toc: false
+---
+
+[A working archive]{.kicker}
+
+::: {.lede}
+These are the analytical projects I return to when I want to explain how I think. Each one pairs the numbers with the judgement calls behind them - because the decisions underneath the model usually matter more than the model itself.
+:::
+
+Each project page includes the live **Python code** that produced the charts and tables you see. Nothing here is a screenshot.
+
+::: {#project-listing}
+:::

@@ -1,0 +1,15 @@
+# Projects metadata - consumed by projects/index.qmd listing.
+# The listing is populated from the `list/` subdirectory via frontmatter;
+# this file is an explicit index kept in sync for documentation purposes.
+- title: "Fraud Detection on a Financial Dataset"
+  path: list/fraud-detection.qmd
+  categories: [Machine Learning, Classification, Python, EDA]
+  date: 2026-02-18
+- title: "Employee Attrition Prediction - IBM HR Analytics"
+  path: list/employee-attrition.qmd
+  categories: [Machine Learning, HR Analytics, Python, Classification]
+  date: 2026-01-22
+- title: "Ryanair Under Uncertainty - A VUCA Case Study"
+  path: list/ryanair-vuca.qmd
+  categories: [Strategy, Business Analysis, Python, Case Study]
+  date: 2025-11-10
