@@ -1,0 +1,232 @@
+---
+title: "Ryanair Under Uncertainty - A VUCA Case Study"
+description: "Applying PESTLE, Porter's Five Forces, TOWS, and the VUCA framework to Ryanair's pandemic response and recovery."
+author: "Sritanya Suresh Andal"
+date: "2025-11-10"
+date-format: "D MMMM YYYY"
+image: ../../images/cover-ryanair.svg
+image-alt: "Stylised radar chart for strategic analysis"
+categories: [Strategy, Business Analysis, Python, Case Study]
+format:
+  html:
+    code-fold: show
+    code-tools: true
+    code-overflow: wrap
+    fig-cap-location: bottom
+    highlight-style: github
+toc: true
+toc-depth: 2
+execute:
+  freeze: auto
+  warning: false
+  message: false
+---
+
+[Project · DCU Business School]{.kicker}
+
+::: {.lede}
+A strategy project worth its weight is one where the frameworks earn their keep. On Ryanair, PESTLE gave us the macro view, Porter's gave us the industry view, TOWS linked the two, and VUCA named the weather the airline was flying through.
+:::
+
+## The brief
+
+Co-author a strategic report analysing the **airline industry pre- and post-COVID-19**, with a particular focus on **how Ryanair leveraged environmental analysis and dynamic capabilities** to manage the pandemic and recover profitability.
+
+By 2022 Ryanair had rebuilt to **97 million passengers** and **€4.8 billion revenue**. The question was not *whether* they recovered but *what enabled it* - and what that tells us about strategy in genuinely volatile environments.
+
+::: {.callout-note appearance="simple" icon=false}
+**Methodological frame.** PESTLE (external drivers) → Five Forces (industry structure) → SWOT/TOWS (options) → VUCA (how to decide under uncertainty). Each step narrows the question before the one after it is asked.
+:::
+
+## Reproducible setup
+
+```{python}
+#| label: setup
+import numpy as np
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+```
+
+## Passenger volumes - the shape of the shock and the recovery
+
+Ryanair passenger data, sourced from its annual reports, captures the pattern clearly:
+
+```{python}
+#| label: passenger-data
+ryanair = pd.DataFrame({
+    "fiscal_year": [2018, 2019, 2020, 2021, 2022, 2023],
+    "passengers_m": [130.0, 142.0, 149.0, 27.5, 97.0, 168.6],
+    "revenue_bn":   [7.15, 7.70, 8.50, 1.64, 4.80, 10.78],
+})
+ryanair
+```
+
+```{python}
+#| label: fig-passengers
+#| fig-cap: "Ryanair passengers (millions) and revenue (€bn), FY2018–FY2023. The VUCA event is the 2021 trough; the structural question is what shaped the bounce."
+fig = go.Figure()
+fig.add_trace(go.Scatter(
+    x=ryanair["fiscal_year"], y=ryanair["passengers_m"],
+    mode="lines+markers+text", name="Passengers (m)",
+    line=dict(color="#2D5F4E", width=3),
+    text=ryanair["passengers_m"], textposition="top center",
+))
+fig.add_trace(go.Bar(
+    x=ryanair["fiscal_year"], y=ryanair["revenue_bn"],
+    name="Revenue (€bn)", yaxis="y2", opacity=0.35, marker_color="#B45309",
+))
+fig.update_layout(
+    height=440, margin=dict(l=20, r=20, t=40, b=40),
+    yaxis=dict(title="Passengers (millions)", color="#2D5F4E"),
+    yaxis2=dict(title="Revenue (€bn)", overlaying="y", side="right", color="#B45309"),
+    plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
+    legend=dict(x=0.02, y=0.98),
+)
+fig.show()
+```
+
+## Porter's Five Forces, scored
+
+Every framework is only as useful as the discipline it forces. We scored each force on a 1–5 scale (1 weak, 5 strong) pre- and post-COVID:
+
+```{python}
+#| label: fig-five-forces
+#| fig-cap: "Five Forces intensity, Ryanair pre-COVID (2019) vs post-shock (2022)."
+forces = pd.DataFrame({
+    "Force": [
+        "New entrants", "Substitutes", "Buyer power",
+        "Supplier power", "Competitive rivalry",
+    ],
+    "Pre-COVID (2019)":  [3, 3, 4, 4, 5],
+    "Post-shock (2022)": [2, 3, 4, 5, 4],
+})
+
+fig = go.Figure()
+fig.add_trace(go.Scatterpolar(
+    r=forces["Pre-COVID (2019)"].tolist()   + [forces["Pre-COVID (2019)"][0]],
+    theta=forces["Force"].tolist()          + [forces["Force"][0]],
+    fill="toself", name="Pre-COVID (2019)", line_color="#2D5F4E",
+    fillcolor="rgba(45, 95, 78, 0.25)",
+))
+fig.add_trace(go.Scatterpolar(
+    r=forces["Post-shock (2022)"].tolist()  + [forces["Post-shock (2022)"][0]],
+    theta=forces["Force"].tolist()          + [forces["Force"][0]],
+    fill="toself", name="Post-shock (2022)", line_color="#B45309",
+    fillcolor="rgba(180, 83, 9, 0.18)",
+))
+fig.update_layout(
+    polar=dict(radialaxis=dict(visible=True, range=[0, 5])),
+    height=460, margin=dict(l=40, r=40, t=40, b=40),
+    paper_bgcolor="rgba(0,0,0,0)",
+)
+fig.show()
+```
+
+::: {.callout-tip appearance="simple"}
+**Notable shift.** Supplier power moved from 4 to 5 as post-COVID fuel volatility, Boeing delivery delays, and staffing shortages all compounded. Competitive rivalry softened slightly as Flybe, Alitalia, and Norwegian exited or restructured.
+:::
+
+## TOWS - matching the internal to the external
+
+```{python}
+#| label: tbl-tows
+#| tbl-cap: "TOWS matrix linking Ryanair's internal posture to external drivers."
+tows = pd.DataFrame({
+    "Strengths (S)": [
+        "Lowest unit cost in Europe",
+        "~500-aircraft single-fleet simplicity",
+        "Balance-sheet strength",
+    ],
+    "Weaknesses (W)": [
+        "Brand perception on customer service",
+        "Reliance on secondary airports",
+        "Labour relations history",
+    ],
+    "Opportunities (O)": [
+        "Capacity vacated by failed carriers",
+        "Post-shock consumer sensitivity to price",
+        "SAF / fleet-renewal subsidies",
+    ],
+    "Threats (T)": [
+        "Fuel volatility",
+        "Boeing delivery delays",
+        "EU emissions regulation",
+    ],
+})
+tows
+```
+
+The **S–O move** that mattered most: using post-shock cost discipline to absorb capacity that competitors could not. The **W–T vigilance**: brand exposure in a regulatory environment that increasingly rewards ESG narratives Ryanair has not historically prioritised.
+
+## VUCA - naming the weather
+
+```{mermaid}
+flowchart LR
+    V[Volatility:<br/>fuel, demand, labour] --> R[Response:<br/>hedging, yield agility]
+    U[Uncertainty:<br/>variants, regulation] --> R2[Response:<br/>scenario planning]
+    C[Complexity:<br/>multi-market operations] --> R3[Response:<br/>single-fleet simplicity]
+    X[Ambiguity:<br/>recovery timing] --> R4[Response:<br/>option-style capacity]
+    classDef v fill:#FEF3C7,stroke:#B45309,color:#0F172A;
+    classDef r fill:#D8E4DD,stroke:#2D5F4E,color:#0F172A;
+    class V,U,C,X v;
+    class R,R2,R3,R4 r;
+```
+
+Ryanair's response to VUCA was not a plan - it was a **posture**. Low cost, fleet simplicity, balance-sheet reserve, and willingness to expand when others retrenched. That posture is what allowed the 2022 recovery to look so sharp in retrospect.
+
+## A small calculation on cost resilience
+
+A simple sensitivity: how does Ryanair's ~€40/passenger cost base compare to a hypothetical competitor at €60/passenger across a demand shock?
+
+```{python}
+#| label: fig-resilience
+#| fig-cap: "Per-passenger margin at different ticket prices. The gap between the two cost bases is the resilience cushion."
+prices = np.arange(30, 121, 5)
+ryan_cost = 40
+comp_cost = 60
+
+margins = pd.DataFrame({
+    "ticket_price": prices,
+    "Ryanair_margin": prices - ryan_cost,
+    "Competitor_margin": prices - comp_cost,
+})
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=margins["ticket_price"], y=margins["Ryanair_margin"],
+                         mode="lines+markers", name="Ryanair (€40 cost)",
+                         line=dict(color="#2D5F4E", width=3)))
+fig.add_trace(go.Scatter(x=margins["ticket_price"], y=margins["Competitor_margin"],
+                         mode="lines+markers", name="Competitor (€60 cost)",
+                         line=dict(color="#B45309", width=3, dash="dash")))
+fig.add_hline(y=0, line_dash="dot", line_color="#94A3B8")
+fig.update_layout(height=420, xaxis_title="Ticket price (€)",
+                  yaxis_title="Margin per passenger (€)",
+                  margin=dict(l=20, r=20, t=20, b=40),
+                  plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)")
+fig.show()
+```
+
+The €20/passenger cost advantage is the headline. Equally important is the **breakeven gap**: Ryanair continues to clear zero at ticket prices where the competitor is loss-making. In a demand shock, that gap is strategy.
+
+## Recovery profitability - the equation that matters
+
+The recovery can be summarised neatly in a standard revenue decomposition:
+
+$$
+\text{Revenue} = P \times Q \times L
+$$
+
+Where $P$ is average ticket price, $Q$ is seat capacity deployed, and $L$ is load factor. Ryanair's post-shock play was to **expand $Q$ aggressively** while competitors could not, accept modest pressure on $P$, and rely on operational discipline to keep $L$ above 90 %.
+
+## Footnotes and attribution
+
+- Passenger and revenue figures are drawn from Ryanair's annual reports for FY2018–FY2023.[^1]
+- Industry-exit data (Flybe, Alitalia, Norwegian) is drawn from publicly reported news coverage.
+- This was a group project. My contribution was the pre-COVID environmental analysis and the Five Forces scoring, drafted and refined with my teammates.
+
+[^1]: Ryanair Holdings PLC, Annual Reports, 2018–2023.
+
+::: {.callout-note appearance="minimal" icon=false}
+Back to [Projects](../index.qmd).
+:::

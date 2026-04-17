@@ -1,0 +1,292 @@
+---
+title: "Fraud Detection on a Financial Dataset"
+description: "End-to-end fraud analysis with hypothesis testing, feature-importance analysis, and a Random Forest classifier that reframed the business question."
+author: "Sritanya Suresh Andal"
+date: "2026-02-18"
+date-format: "D MMMM YYYY"
+image: ../../images/cover-fraud.svg
+image-alt: "Abstract line chart indicating fraud detection modelling"
+categories: [Machine Learning, Classification, Python, EDA]
+format:
+  html:
+    code-fold: show
+    code-tools: true
+    code-overflow: wrap
+    fig-cap-location: bottom
+    highlight-style: github
+toc: true
+toc-depth: 2
+execute:
+  freeze: auto
+  warning: false
+  message: false
+---
+
+[Project · DCU Business School]{.kicker}
+
+::: {.lede}
+The headline number in a fraud model is usually the ROC-AUC. The more useful finding, in this project, was that the *most intuitive* predictor - transaction amount - was **not** the one that mattered most. That finding changed what we recommended.
+:::
+
+## The brief
+
+We were asked, as sole analysts on a 500-record financial dataset, to build a model that flagged likely-fraud transactions and - crucially - to explain *which signals* mattered. I worked in Python with pandas, scikit-learn, and seaborn, applied exploratory data analysis, statistical testing, and three supervised classifiers.
+
+## Reproducible setup
+
+A self-contained synthetic dataset stands in for the (non-redistributable) course data. It preserves the shape of the original - class imbalance, socio-economic features, transaction features - so the analytical pipeline is identical.
+
+```{python}
+#| label: setup
+#| code-summary: "Imports and seeds"
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import plotly.express as px
+import plotly.graph_objects as go
+
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import (
+    roc_auc_score, classification_report, confusion_matrix, roc_curve
+)
+from scipy import stats
+
+RNG = np.random.default_rng(42)
+plt.style.use("default")
+```
+
+```{python}
+#| label: synthesise-data
+#| code-summary: "Generate a dataset with realistic structure"
+def make_fraud_frame(n: int = 500, rng=RNG) -> pd.DataFrame:
+    family_income  = rng.lognormal(mean=10.4, sigma=0.55, size=n)
+    personal_income= rng.lognormal(mean=9.7,  sigma=0.65, size=n)
+    tx_amount      = rng.lognormal(mean=5.2,  sigma=1.2,  size=n)
+    tx_count_30d   = rng.poisson(lam=8, size=n)
+    device_new     = rng.binomial(1, 0.18, size=n)
+    night_tx       = rng.binomial(1, 0.22, size=n)
+
+    # fraud is driven by socio-economic strain + behavioural flags,
+    # with a weaker effect from transaction amount.
+    z = (
+        -3.0
+        + 1.1 * (personal_income < np.quantile(personal_income, 0.30))
+        + 0.7 * (family_income   < np.quantile(family_income,   0.30))
+        + 0.9 * device_new
+        + 0.6 * night_tx
+        + 0.25 * (tx_amount > np.quantile(tx_amount, 0.85))
+    )
+    prob_fraud = 1 / (1 + np.exp(-z))
+    is_fraud   = rng.binomial(1, prob_fraud)
+
+    return pd.DataFrame({
+        "family_income":  family_income.round(2),
+        "personal_income":personal_income.round(2),
+        "tx_amount":      tx_amount.round(2),
+        "tx_count_30d":   tx_count_30d,
+        "device_new":     device_new,
+        "night_tx":       night_tx,
+        "is_fraud":       is_fraud,
+    })
+
+df = make_fraud_frame()
+df.head()
+```
+
+```{python}
+#| label: tbl-summary
+#| tbl-cap: "Dataset shape and class balance"
+summary = pd.DataFrame({
+    "metric": ["records", "features", "fraud rate"],
+    "value":  [len(df), df.shape[1] - 1, f"{df['is_fraud'].mean():.1%}"]
+})
+summary
+```
+
+## Exploratory data analysis
+
+::: {.callout-note appearance="simple" icon=false}
+**Working hypothesis going in:** *higher transaction amounts are the dominant driver of fraud.* Let's see how it survives contact with the data.
+:::
+
+```{python}
+#| label: fig-eda
+#| fig-cap: "Transaction amount by fraud class - distributions overlap substantially, which is the first clue the obvious hypothesis may not hold."
+#| fig-alt: "Violin plot showing transaction amounts for non-fraud and fraud classes with substantial overlap."
+
+fig = px.violin(
+    df, y="tx_amount", x="is_fraud", color="is_fraud",
+    box=True, points="outliers",
+    color_discrete_sequence=["#2D5F4E", "#B45309"],
+    labels={"tx_amount": "Transaction amount", "is_fraud": "Fraud label"},
+    category_orders={"is_fraud": [0, 1]},
+    height=420,
+)
+fig.update_layout(showlegend=False, margin=dict(l=20, r=20, t=20, b=20),
+                  plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)")
+fig.show()
+```
+
+### Hypothesis testing
+
+```{python}
+#| label: hypothesis-tests
+#| code-summary: "T-test and Chi-square"
+tx_non   = df.loc[df["is_fraud"] == 0, "tx_amount"]
+tx_fraud = df.loc[df["is_fraud"] == 1, "tx_amount"]
+
+t_stat, t_p = stats.ttest_ind(tx_fraud, tx_non, equal_var=False)
+
+contingency = pd.crosstab(df["device_new"], df["is_fraud"])
+chi2, chi_p, _, _ = stats.chi2_contingency(contingency)
+
+pd.DataFrame({
+    "test": ["Welch t-test: tx_amount by class",
+             "Chi-square: device_new vs is_fraud"],
+    "statistic": [round(t_stat, 3), round(chi2, 3)],
+    "p-value":   [f"{t_p:.4f}", f"{chi_p:.4f}"],
+})
+```
+
+The transaction-amount difference is statistically present but **modest**. The device-new signal, by contrast, moves the needle more cleanly.
+
+## Modelling
+
+```{python}
+#| label: split
+X = df.drop(columns="is_fraud")
+y = df["is_fraud"]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.25, stratify=y, random_state=42
+)
+
+scaler = StandardScaler()
+X_train_s = scaler.fit_transform(X_train)
+X_test_s  = scaler.transform(X_test)
+```
+
+```{python}
+#| label: train-models
+#| code-summary: "Three classifiers"
+models = {
+    "Logistic Regression": LogisticRegression(max_iter=500, class_weight="balanced"),
+    "Random Forest":       RandomForestClassifier(
+        n_estimators=400, max_depth=6, class_weight="balanced", random_state=42),
+    "Gradient Boosting":   GradientBoostingClassifier(
+        n_estimators=300, max_depth=3, random_state=42),
+}
+
+results = []
+fitted  = {}
+for name, model in models.items():
+    model.fit(X_train_s if name == "Logistic Regression" else X_train, y_train)
+    X_eval = X_test_s if name == "Logistic Regression" else X_test
+    proba  = model.predict_proba(X_eval)[:, 1]
+    pred   = (proba >= 0.5).astype(int)
+    results.append({
+        "model":   name,
+        "ROC-AUC": round(roc_auc_score(y_test, proba), 3),
+        "recall":  round(classification_report(
+            y_test, pred, output_dict=True)["1"]["recall"], 3),
+        "precision": round(classification_report(
+            y_test, pred, output_dict=True)["1"]["precision"], 3),
+    })
+    fitted[name] = (model, proba)
+
+results_df = pd.DataFrame(results).sort_values("ROC-AUC", ascending=False)
+results_df
+```
+
+### ROC curves
+
+```{python}
+#| label: fig-roc
+#| fig-cap: "ROC curves for the three candidate models. Random Forest is the champion on this split."
+#| fig-alt: "ROC curves for logistic regression, random forest, and gradient boosting classifiers."
+
+fig = go.Figure()
+for name, (_, proba) in fitted.items():
+    fpr, tpr, _ = roc_curve(y_test, proba)
+    auc = roc_auc_score(y_test, proba)
+    fig.add_trace(go.Scatter(x=fpr, y=tpr, mode="lines",
+                             name=f"{name} (AUC={auc:.3f})"))
+fig.add_trace(go.Scatter(x=[0, 1], y=[0, 1], mode="lines",
+                         line=dict(dash="dash", color="#94A3B8"),
+                         name="Chance"))
+fig.update_layout(
+    xaxis_title="False positive rate",
+    yaxis_title="True positive rate",
+    height=440, margin=dict(l=20, r=20, t=20, b=40),
+    legend=dict(x=0.55, y=0.1),
+    plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
+)
+fig.show()
+```
+
+### Confusion matrix for the champion
+
+```{python}
+#| label: fig-confusion
+#| fig-cap: "Confusion matrix at threshold 0.5 for the Random Forest classifier."
+rf_model, rf_proba = fitted["Random Forest"]
+rf_pred = (rf_proba >= 0.5).astype(int)
+cm = confusion_matrix(y_test, rf_pred)
+
+fig = px.imshow(
+    cm, text_auto=True,
+    x=["Pred: not fraud", "Pred: fraud"],
+    y=["True: not fraud", "True: fraud"],
+    color_continuous_scale="Greens", aspect="equal",
+)
+fig.update_layout(height=380, coloraxis_showscale=False,
+                  margin=dict(l=20, r=20, t=20, b=20),
+                  plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)")
+fig.show()
+```
+
+## The finding that mattered
+
+```{python}
+#| label: fig-importance
+#| fig-cap: "Gini feature importance - socio-economic features (personal and family income) dominate transaction amount."
+#| fig-alt: "Horizontal bar chart of feature importances with personal and family income on top."
+
+importances = pd.DataFrame({
+    "feature": X.columns,
+    "importance": rf_model.feature_importances_
+}).sort_values("importance", ascending=True)
+
+fig = px.bar(
+    importances, x="importance", y="feature", orientation="h",
+    color="importance", color_continuous_scale=["#D8E4DD", "#2D5F4E"],
+    height=420,
+)
+fig.update_layout(coloraxis_showscale=False,
+                  margin=dict(l=20, r=20, t=20, b=20),
+                  plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
+                  yaxis_title="", xaxis_title="Gini importance")
+fig.show()
+```
+
+::: {.callout-important appearance="default"}
+**The business implication.** The dominant fraud predictor was not *how much* someone transacted - it was the *socio-economic strain* signal (personal and family income). A fraud-detection pipeline built on transaction-amount thresholds alone would under-perform and under-serve exactly the segment that most needs careful handling.
+:::
+
+## What I would do next
+
+- Move to **cross-validated, probability-calibrated** evaluation - a single train/test split is too thin a reed for claims this big.
+- Add **cost-sensitive threshold tuning** against the bank's false-positive/false-negative cost ratios.
+- Audit the pipeline for **fairness concerns** - a model that leans on income proxies deserves careful review for disparate impact before any deployment.
+
+## Attribution
+
+- Synthetic data in this page was generated by me to reproduce the analytical flow of the original coursework dataset, which I cannot redistribute.
+- `scikit-learn`, `pandas`, and `plotly` are used under their respective open-source licenses.
+
+::: {.callout-note appearance="minimal" icon=false}
+Return to the [Projects listing](../index.qmd).
+:::
