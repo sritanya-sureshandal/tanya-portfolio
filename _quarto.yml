@@ -1,0 +1,101 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!README.md"
+  resources:
+    - "cv/"
+    - "images/"
+
+website:
+  title: "Sritanya Suresh Andal"
+  description: "MSc Business Analytics - portfolio, projects and writing."
+  site-url: "https://sritanya.github.io"
+  favicon: images/favicon.svg
+  search:
+    location: navbar
+    type: overlay
+  page-navigation: true
+  back-to-top-navigation: true
+  reader-mode: false
+  open-graph: true
+  twitter-card: true
+  navbar:
+    logo: images/logo.svg
+    logo-alt: "Sritanya Suresh Andal"
+    title: false
+    pinned: true
+    collapse-below: lg
+    background: primary
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "Blog"
+        href: blog/index.qmd
+      - text: "Reflection"
+        href: reflection.qmd
+      - text: "Contact"
+        href: contact.qmd
+    right:
+      - text: "CV"
+        href: cv/SritanyaSureshAndal_CV.pdf
+        target: _blank
+        icon: file-earmark-person
+      - icon: github
+        href: https://github.com/sritanya-sureshandal
+        target: _blank
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/sritanyasureshandal
+        target: _blank
+        aria-label: LinkedIn
+      - icon: envelope
+        href: "mailto:sritanyaandalsuresh@gmail.com"
+        aria-label: Email
+  page-footer:
+    border: true
+    left: |
+      &copy; 2026 Sritanya Suresh Andal &middot; All rights reserved.
+    center: |
+      Dublin, Ireland
+    right: |
+      Built with [Quarto](https://quarto.org) &middot; [Source on GitHub](https://github.com/sritanya-sureshandal)
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles.scss]
+      dark: [darkly, styles-dark.scss]
+    toc: true
+    toc-location: right
+    toc-depth: 3
+    code-fold: false
+    code-tools: true
+    code-link: true
+    code-copy: true
+    code-overflow: wrap
+    highlight-style:
+      light: github
+      dark: github-dark
+    fig-responsive: true
+    link-external-newwindow: true
+    link-external-icon: true
+    smooth-scroll: true
+    anchor-sections: true
+    citations-hover: true
+    footnotes-hover: true
+    mainfont: "Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+    monofont: "JetBrains Mono, SF Mono, Menlo, Consolas, monospace"
+
+execute:
+  freeze: auto
+  warning: false
+  message: false
+
+mermaid:
+  theme: neutral

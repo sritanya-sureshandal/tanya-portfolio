@@ -2,7 +2,7 @@
 title: "Sritanya Suresh Andal"
 subtitle: "MSc Business Analytics · Dublin City University"
 pagetitle: "Sritanya Suresh Andal - Portfolio"
-image: images/profile.svg
+image: images/profile.jpeg
 image-alt: "Portrait placeholder for Sritanya Suresh Andal"
 description-meta: |
   Portfolio of Sritanya Suresh Andal - MSc Business Analytics at Dublin City University.
@@ -18,7 +18,7 @@ about:
       target: _blank
     - icon: github
       text: GitHub
-      href: https://github.com/sritanya
+      href: https://github.com/sritanya-sureshandal
       target: _blank
     - icon: envelope
       text: Email

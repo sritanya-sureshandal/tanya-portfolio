@@ -28,7 +28,7 @@ The best way to reach me is email - I answer within a day or two. For profession
 ### Online
 
 - {{< fa brands linkedin >}} [linkedin.com/in/sritanyasureshandal](https://www.linkedin.com/in/sritanyasureshandal){target="_blank"}
-- {{< fa brands github >}} [GitHub](https://github.com/sritanya){target="_blank"}
+- {{< fa brands github >}} [GitHub](https://github.com/sritanya-sureshandal){target="_blank"}
 - {{< fa regular file-lines >}} [Download my CV (PDF)](cv/SritanyaSureshAndal_CV.pdf){target="_blank"}
 :::
 :::
@@ -76,5 +76,5 @@ Thanks for reading this far. I am looking forward to the conversation.
 ---
 
 ::: {style="text-align: center; margin-top: 2.5rem;"}
-[Made with care in Dublin · [source repo](https://github.com/sritanya){target="_blank"}]{.kicker}
+[Made with care in Dublin · [source repo](https://github.com/sritanya-sureshandal){target="_blank"}]{.kicker}
 :::

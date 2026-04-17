@@ -21,7 +21,7 @@ toc: false
 [Writing, mostly to think clearly.]{.kicker}
 
 ::: {.lede}
-I write to notice what I have learned. These posts track the year - the year I moved countries, switched programmes, and built the rest of this site. They are personal, and they are true.
+I write to notice what I have learned. These posts track the year - the year I moved countries, switched programmes, and built this site. They are personal, and they are true.
 :::
 
 ::: {#posts}
