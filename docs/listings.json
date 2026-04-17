@@ -1,0 +1,21 @@
+[
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/list/fraud-detection.html",
+      "/projects/list/employee-attrition.html",
+      "/projects/list/ryanair-vuca.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/posts/building-eportfolio.html",
+      "/blog/posts/clarity-between-languages.html",
+      "/blog/posts/sunk-cost-fallacy.html",
+      "/blog/posts/moving-to-dublin.html",
+      "/blog/posts/people-over-code.html",
+      "/blog/posts/vp-leadership.html"
+    ]
+  }
+]
