@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1F2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <g transform="translate(500, 100)" fill="none" stroke="#F59E0B" stroke-width="2.5">
+    <path d="M0 300 L60 220 L120 260 L180 180 L240 220 L300 120"/>
+    <circle cx="300" cy="120" r="6" fill="#F59E0B"/>
+  </g>
+  <g transform="translate(500, 100)" fill="none" stroke="#7FAE96" stroke-width="2" stroke-dasharray="6 4">
+    <path d="M0 300 L60 340 L120 330 L180 360 L240 350 L300 380"/>
+  </g>
+  <text x="56" y="130" font-family="Inter, sans-serif" font-size="14" letter-spacing="6" fill="#7FAE96">BLOG · DECISIONS</text>
+  <text x="56" y="210" font-family="Georgia, 'Instrument Serif', serif" font-size="54" fill="#F1F5F9">The Sunk Cost</text>
+  <text x="56" y="270" font-family="Georgia, 'Instrument Serif', serif" font-size="54" fill="#F1F5F9">Fallacy in Projects</text>
+</svg>

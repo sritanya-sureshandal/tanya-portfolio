@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Sritanya Suresh Andal</title>
+<link>https://sritanya.github.io/blog/</link>
+<atom:link href="https://sritanya.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>Personal essays by Sritanya Suresh Andal on leadership, moving to Dublin, working between languages, and building an e-portfolio.</description>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Tue, 14 Apr 2026 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Building My E-Portfolio</title>
+  <dc:creator>Sritanya Suresh Andal</dc:creator>
+  <link>https://sritanya.github.io/blog/posts/building-eportfolio.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><span class="kicker">Essay · April 2026</span></p>
+<div class="lede">
+<p>The code, the structure, and the design are all part of how you present your thinking. I did not expect the technical side to be the difficult part - and in some ways, it wasn’t.</p>
+</div>
+<p>I have worked with code enough to be comfortable building things from scratch. I have used VS Code, written HTML, CSS, and JavaScript, and built websites where I controlled every element directly. So when I started working on my e-portfolio, I did not expect the technical side to be the difficult part.</p>
+<p>In some ways, it wasn’t. The fundamentals were familiar. But the tools I was using - <strong>Quarto, Git, and Sass</strong> - introduced a different way of working that I had not experienced before.</p>
+<section id="quarto-the-system" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-the-system">Quarto, the system</h2>
+<p>Quarto required a shift in how I thought about building a site. Instead of writing static HTML pages, I was working within a system that combines content, configuration, and rendering. Small decisions in <code>_quarto.yml</code> affected the entire structure of the site - navigation, layout, output directories.</p>
+<p>Getting everything to work correctly - especially deployment through the <code>docs/</code> folder and GitHub Pages - took more attention than I initially expected. When something broke, it was not always obvious whether the issue was in the content, the configuration, or the build process.</p>
+</section>
+<section id="git-properly" class="level2">
+<h2 class="anchored" data-anchor-id="git-properly">Git, properly</h2>
+<p>Using Git properly was another adjustment. I have not used GitHub before, and this project required a disciplined approach: committing changes regularly, structuring the repository cleanly, and thinking about version control as part of the workflow rather than an afterthought.</p>
+<p>Making meaningful commits and tracking incremental changes made me more aware of how the project was evolving over time.</p>
+</section>
+<section id="sass-the-reason" class="level2">
+<h2 class="anchored" data-anchor-id="sass-the-reason">Sass, the reason</h2>
+<p>Sass was different again. I understood CSS, but Sass introduced a level of structure - variables, organisation, reuse - that made styling more systematic.</p>
+<p>It felt unfamiliar at first, but once I started defining colour variables, adjusting typography, and separating defaults from custom rules, it became clear why it was part of the requirement. It made consistency easier to maintain across the site.</p>
+</section>
+<section id="the-part-that-was-not-technical" class="level2">
+<h2 class="anchored" data-anchor-id="the-part-that-was-not-technical">The part that was not technical</h2>
+<p>The technical challenges were manageable. What I did not expect was how much time I would spend on decisions that were not strictly technical.</p>
+<p>Because the portfolio was not just functional - it was <strong>representational</strong>. It had to include a lot of elements that were all connected through a coherent navigation system. But beyond meeting those requirements, I found myself thinking about how everything fit together. How someone would move through the site. What they would notice first. What each project page communicated beyond the code itself.</p>
+<p>I spent time reorganising content, rewriting descriptions, and adjusting layouts in ways I would not normally prioritise in a typical coding project. Even small things - like how a project was introduced, or how much detail to include - required judgment and iterative editing.</p>
+</section>
+<section id="writing-this-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="writing-this-reflection">Writing this reflection</h2>
+<p>Writing this reflection section made that even more apparent. Explaining what I had built, and what I had learned, forced me to look at my own process more closely. It is one thing to complete a project; it is another to articulate how you approached it and why certain decisions mattered.</p>
+</section>
+<section id="does-it-work-does-it-represent-me" class="level2">
+<h2 class="anchored" data-anchor-id="does-it-work-does-it-represent-me">Does it work? Does it represent me?</h2>
+<p>What this project made clear to me is that building something like this sits somewhere between <strong>technical work and communication</strong>. The code, the structure, and the design are all part of how you present your thinking.</p>
+<p>I have done my best to meet all the functional requirements with regard to the pages, the navigation, the deployment, the use of Git, the integration of Python code. But I believe the more important part was understanding how all these pieces come together into something coherent and usable.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This portfolio is something I will continue to refine. But it is the first time I have built a technical project where the question was not just “does it work?” but also “does it represent me accurately?”</p>
+</div>
+</div>
+</div>
+<p>That distinction made the process more demanding, and more meaningful, than I initially expected.</p>
+
+
+<!-- -->
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Craft</category>
+  <category>Quarto</category>
+  <category>Reflection</category>
+  <guid>https://sritanya.github.io/blog/posts/building-eportfolio.html</guid>
+  <pubDate>Tue, 14 Apr 2026 23:00:00 GMT</pubDate>
+  <media:content url="https://sritanya.github.io/images/blog-eportfolio.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>Finding Clarity Between Languages</title>
+  <dc:creator>Sritanya Suresh Andal</dc:creator>
+  <link>https://sritanya.github.io/blog/posts/clarity-between-languages.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><span class="kicker">Essay · December 2025</span></p>
+<div class="lede">
+<p>Tamil is my first language - the one I think in when I am trying to be precise.</p>
+</div>
+<p>I have spoken English for most of my life: in school, in university, in professional settings. By conventional measures, I am fluent. But fluency and ease are not the same thing. There is a layer of effort that native speakers never have to apply - a small but constant background tax on every conversation where the stakes feel high.</p>
+<section id="the-tax-gets-heavier" class="level2">
+<h2 class="anchored" data-anchor-id="the-tax-gets-heavier">The tax gets heavier</h2>
+<p>When I began my MSc at DCU, that tax felt heavier than usual. The academic environment is built for verbal participation: discussions, group work, presentations. Every contribution is visible. I noticed immediately that I was <strong>monitoring myself more than I was engaging</strong> - choosing words carefully, second-guessing phrasing, worrying that an accent or an awkward sentence construction would be read as a lack of intelligence rather than what it was: a second language in active use.</p>
+</section>
+<section id="the-vr-session-that-cracked-it-open" class="level2">
+<h2 class="anchored" data-anchor-id="the-vr-session-that-cracked-it-open">The VR session that cracked it open</h2>
+<p>The first real crack in that anxiety came during a <strong>VR simulation</strong> in my Strategic Thinking module. The session involved roleplaying corporate scenarios - one required me to convince a Lead Strategist to pause a project because the underlying data was flawed; another to argue as HR against a senior manager who was overreacting to negative employee feedback.</p>
+<p>Both scenarios put me in the position of disagreeing with authority, in English, in real time, with no script.</p>
+<p>I was nervous going in. I expected to feel exposed - by my accent, by the gap between what I wanted to say and what I could reach for quickly. What happened instead surprised me. Once I focused on the <em>argument</em> rather than the <em>language</em>, something shifted. I was not performing English anymore. I was using it.</p>
+<p>Grounding my points in data and evidence meant I did not need an extensive vocabulary - but a clearer one. And the clarity, I was finding, was something I could do.</p>
+</section>
+<section id="the-deeper-shift---in-writing" class="level2">
+<h2 class="anchored" data-anchor-id="the-deeper-shift---in-writing">The deeper shift - in writing</h2>
+<p>The deeper shift came later, while writing my reflective journal. Reflective writing is deceptively difficult. It asks you to be honest about your own thinking, which requires precision - not performance, not sophistication, just precision.</p>
+<p>Writing in English for the journal, I found I was not translating myself. I was <strong>thinking directly onto the page</strong>. The discipline of searching for the exact word to describe a feeling or a moment, rather than reaching for the closest approximation in Tamil, sharpened my thinking rather than limiting it. The constraint became a tool.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>What I had been calling a disadvantage was also a practice.</strong> Non-native speakers learn to choose words carefully because we cannot afford to be lazy with them. That carefulness is, in its own way, a form of rigour.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="where-i-stand-now" class="level2">
+<h2 class="anchored" data-anchor-id="where-i-stand-now">Where I stand now</h2>
+<p>The challenges of being an ESL speaker in a native-English academic environment are real and they accumulate. But I have stopped framing my English as something that needs to catch up. It is a working language I have shaped through effort, and the clarity I can reach in it is genuinely my own.</p>
+<p>The VR session showed me how I could use it under pressure. The journal showed me I could use it to think.</p>
+<p>Both mattered.</p>
+
+
+<!-- -->
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Personal</category>
+  <category>Language</category>
+  <category>Reflection</category>
+  <guid>https://sritanya.github.io/blog/posts/clarity-between-languages.html</guid>
+  <pubDate>Mon, 08 Dec 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://sritanya.github.io/images/blog-languages.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>The Sunk Cost Fallacy in Projects</title>
+  <dc:creator>Sritanya Suresh Andal</dc:creator>
+  <link>https://sritanya.github.io/blog/posts/sunk-cost-fallacy.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><span class="kicker">Essay · November 2025</span></p>
+<div class="lede">
+<p>There is a particular kind of group-project paralysis that has nothing to do with laziness or poor planning. It is the paralysis of <em>investment</em>.</p>
+</div>
+<p>There is a particular kind of group-project paralysis that has nothing to do with laziness or poor planning. It is the paralysis of investment - the moment a team looks at weeks of work and decides, collectively and quietly, that undoing any of it would be too costly to contemplate.</p>
+<p>I encountered this during a strategy group project at DCU, and watching it unfold from the inside taught me more about decision-making than any case study has.</p>
+<section id="the-moment-the-framework-became-a-feeling" class="level2">
+<h2 class="anchored" data-anchor-id="the-moment-the-framework-became-a-feeling">The moment the framework became a feeling</h2>
+<p>Our group had developed a set of strategic models over several weeks. We had invested real time in them - late nights, multiple iterations, long discussions. When we received feedback from our professor indicating that the models needed significant rework rather than refinement, the team’s first instinct was not to redo them but to defend what we had built and find ways to adjust around the edges.</p>
+<p>I recognised what was happening. We had learned about the <strong>sunk cost fallacy</strong> in our Strategic Thinking module - the cognitive bias where people continue investing in something because of what has already been spent, rather than evaluating what is actually the best path forward.</p>
+<p>I had understood it as a <em>concept</em>. Sitting in that group conversation, I understood it as a <em>feeling</em>.</p>
+</section>
+<section id="why-the-pull-feels-so-rational" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-pull-feels-so-rational">Why the pull feels so rational</h2>
+<p>The pull to protect past effort is strong, and it feels rational. It disguises itself as pragmatism - <em>“we’ve come too far to start over,” “there’s something worth salvaging here.”</em> In reality, it is the past making decisions about the future, which is rarely a sound strategy.</p>
+</section>
+<section id="silence-is-never-neutral" class="level2">
+<h2 class="anchored" data-anchor-id="silence-is-never-neutral">Silence is never neutral</h2>
+<p>I said something. That was new for me. I had spent much of the early semester staying quiet in group settings to avoid disruption. But I had also spent those weeks learning, in my Strategic Thinking module, that <strong>silence is never neutral</strong>. It is a choice with consequences.</p>
+<p>I said, as directly as I could, that I thought we were letting our time investment cloud our judgement about what the project actually needed. I suggested we use the existing models as a reference point rather than a foundation - and that we build something new, informed by what we had learned in the process of building what did not work.</p>
+<p>The group reconsidered. We started again, properly. The final submission was substantially stronger than anything we could have produced by just patching the original.</p>
+</section>
+<section id="the-habit-that-stayed" class="level2">
+<h2 class="anchored" data-anchor-id="the-habit-that-stayed">The habit that stayed</h2>
+<p>What stayed with me was not the outcome but the moment of <strong>naming it</strong>. Cognitive biases are visible in business case studies and invisible in your own decision-making until you build the habit of looking for them.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>That habit - of pausing to ask whether the pull I am feeling is logic or loss aversion - is one of the more useful things I have developed this year.</p>
+</div>
+</div>
+</div>
+<p>Sunk costs are real. So is the cost of letting them run your future decisions.</p>
+
+
+<!-- -->
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Decision-Making</category>
+  <category>Reflection</category>
+  <guid>https://sritanya.github.io/blog/posts/sunk-cost-fallacy.html</guid>
+  <pubDate>Mon, 24 Nov 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://sritanya.github.io/images/blog-sunkcost.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>Moving to Dublin</title>
+  <dc:creator>Sritanya Suresh Andal</dc:creator>
+  <link>https://sritanya.github.io/blog/posts/moving-to-dublin.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><span class="kicker">Essay · October 2025</span></p>
+<div class="lede">
+<p>I had imagined the flight. I had not imagined Sunday.</p>
+</div>
+<p>The first Sunday I spent alone in Dublin, I had no plans, no obligations, and nobody waiting for me. Back home in Chennai, that would have been unthinkable. There was always something - family, noise, an errand, a friend dropping by. Life in Chennai happened around you whether you invited it or not. Dublin asked me what I <em>actually</em> wanted to do, and I did not have an answer.</p>
+<section id="the-psychological-move" class="level2">
+<h2 class="anchored" data-anchor-id="the-psychological-move">The psychological move</h2>
+<p>I moved to Ireland in September 2025 to begin my Masters at Dublin City University. I was prepared practically. I had my accommodation sorted, modules researched, a rough map of the city memorised. What I had not prepared for was the <strong>psychological shift</strong> of being entirely, structurally alone for the first time in my life.</p>
+<p>In India, my independence was negotiated. It existed within a network of relationships, expectations, and shared rhythms. I was independent <em>within</em> a system that held me. In Dublin, I was outside any system that had previously held me. Nobody knew my name. Nobody had any expectations. It was freeing and disorienting in an equal measure.</p>
+</section>
+<section id="a-different-classroom" class="level2">
+<h2 class="anchored" data-anchor-id="a-different-classroom">A different classroom</h2>
+<p>The academic culture added another layer of adjustment. In Ireland, students are expected to speak up, challenge ideas, and participate visibly in their own learning. I came from an educational background where the opposite was often true - where knowing the answer and staying quiet was often safer than volunteering and risking being wrong.</p>
+<p>DCU’s classrooms felt like a different game with different rules, and I had to <strong>unlearn and relearn</strong> how to play.</p>
+<div class="callout callout-style-simple callout-tip no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>The unexpected gift.</strong> Dublin is quieter than I expected - walkable, unhurried, genuinely friendly in a low-key way that took time to read. I started to find rhythms: a coffee shop near campus, a walk along the canal, the strange comfort of grey skies I am learning to stop resenting.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="finding-myself-differently" class="level2">
+<h2 class="anchored" data-anchor-id="finding-myself-differently">Finding myself, differently</h2>
+<p>Without the infrastructure of home - family nearby, a familiar language on every street, people who knew my history - I had to figure out what I actually thought, what I actually needed, who I actually was without context. That process is uncomfortable. It is also one of the most clarifying things I have ever done.</p>
+<p>Moving abroad for a postgraduate degree is often framed as an adventure. It is. And it is also a slow, unglamorous process of becoming more honest with yourself. The independence Dublin gave me was not just logistical - it was <strong>interior</strong>. And that is the kind that stays.</p>
+
+
+<!-- -->
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Personal</category>
+  <category>Transition</category>
+  <guid>https://sritanya.github.io/blog/posts/moving-to-dublin.html</guid>
+  <pubDate>Sat, 11 Oct 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://sritanya.github.io/images/blog-dublin.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>Why I Chose People Over Code</title>
+  <dc:creator>Sritanya Suresh Andal</dc:creator>
+  <link>https://sritanya.github.io/blog/posts/people-over-code.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><span class="kicker">Essay · September 2025</span></p>
+<div class="lede">
+<p>When people ask why I switched from Computing to Business Analytics, the efficient answer is true. The more honest one is simpler and harder to explain in a sentence.</p>
+</div>
+<p>When people ask why I switched from Computing to Business Analytics, I sometimes give the efficient answer: <em>broader career options, interest in data, the intersection of technology and strategy.</em> All of that is true. But the more honest answer is simpler and harder to explain in a sentence.</p>
+<p><strong>I wanted to work with people, not just systems.</strong></p>
+<section id="what-three-years-of-computing-actually-taught-me" class="level2">
+<h2 class="anchored" data-anchor-id="what-three-years-of-computing-actually-taught-me">What three years of Computing actually taught me</h2>
+<p>I spent three years studying Computer Applications - building things, debugging things, learning the internal logic of machines. I was good at it. I genuinely enjoyed the problem-solving dimension. But I kept noticing that the problems I found most interesting were not technical problems. They were human ones:</p>
+<ul>
+<li>Why do organisations make poor decisions despite having good data?</li>
+<li>Why do teams fail even when everyone is individually competent?</li>
+<li>What does it actually take to translate an insight into a change that sticks?</li>
+</ul>
+<p>Those questions pulled me in a different direction.</p>
+</section>
+<section id="the-turning-point-i-did-not-recognise" class="level2">
+<h2 class="anchored" data-anchor-id="the-turning-point-i-did-not-recognise">The turning point I did not recognise</h2>
+<p>My year as VP of the Students’ Union was the turning point I did not recognise until later. I was coordinating 70+ events, representing thousands of students, navigating institutional relationships - and <strong>none of the skills that mattered most were technical</strong>. They were strategic, communicative, and human.</p>
+<p>I was doing data-adjacent work constantly: reading patterns in student feedback, assessing what was working, making decisions under incomplete information. But I was doing it in service of <em>people</em> and <em>outcomes</em>, not systems.</p>
+</section>
+<section id="the-one-week-decision" class="level2">
+<h2 class="anchored" data-anchor-id="the-one-week-decision">The one-week decision</h2>
+<p>By the time I landed in Dublin, I was enrolled in a Masters in Computing. <strong>I switched majors in the first week.</strong></p>
+<p>That sounds impulsive. It was not. Something about being in a new country, in a new classroom, looking at the next year ahead of me made it suddenly very clear that I did not want to go further into pure computing. I wanted the intersection - where data meets decision-making, where analysis meets strategy, where the technical and the human have to work together. Business Analytics felt like exactly that. So I made the call, early, before I had time to talk myself out of it.</p>
+</section>
+<section id="what-i-was-afraid-of---and-what-i-found" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-was-afraid-of---and-what-i-found">What I was afraid of - and what I found</h2>
+<p>Switching came with its own anxiety. I walked into my new programme worried I would be the odd one out: the tech person in a room full of business-fluent peers, my background showing in the wrong ways.</p>
+<p>What I found instead is that it showed in the <strong>right</strong> ones. I can build the models, interrogate the data, ask the questions that get skipped among frameworks.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>I did not leave Computing behind. I brought it with me and put it in service of something bigger: understanding how people and organisations actually work, and how good analysis can help them work better.</p>
+</div>
+</div>
+</div>
+<p>That is still what drives me.</p>
+
+
+<!-- -->
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Career</category>
+  <category>Reflection</category>
+  <guid>https://sritanya.github.io/blog/posts/people-over-code.html</guid>
+  <pubDate>Sat, 27 Sep 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://sritanya.github.io/images/blog-people.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>What Being VP Taught Me About Leadership</title>
+  <dc:creator>Sritanya Suresh Andal</dc:creator>
+  <link>https://sritanya.github.io/blog/posts/vp-leadership.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><span class="kicker">Essay · April 2024</span></p>
+<div class="lede">
+<p>The numbers look clean on a CV. The reality was messier, louder, and far more human.</p>
+</div>
+<p>I did not fully understand what I had signed up for when I stood for election as Vice-President of the Students’ Union at Stella Maris College. I had been on the Core Committee before, managed social media, planned events. I thought I knew the job. What I did not anticipate was how much it would change the way I understand people and myself.</p>
+<p>As VP, I represented over <strong>6,000 students</strong> in administrative discussions, directed <strong>70+ events</strong> across the academic year, and co-founded <strong>Converge 360</strong>, an annual youth leadership symposium that brought together student leaders from across institutions. The numbers look clean on a CV. The reality was messier, louder, and far more human.</p>
+<section id="the-moment-that-shifted-something" class="level2">
+<h2 class="anchored" data-anchor-id="the-moment-that-shifted-something">The moment that shifted something</h2>
+<p>The moment that shifted something in me came not during a large event or a high-stakes meeting, but in a quieter one. A student I had barely spoken to before came to me with a concern - not a formal complaint, not an official grievance, just a worry. She chose to tell me because, she said, she trusted that I would actually do something about it.</p>
+<p>I remember sitting with that sentence long after she left. <em>She trusted me. Not the position. Me.</em></p>
+<p>That is the thing about leadership roles that nobody quite prepares you for: people extend trust before you have had the chance to earn it in the way you expect to. They trust the version of you they believe you can be. That is both a gift and a responsibility that carries real weight.</p>
+</section>
+<section id="the-quieter-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-quieter-model">The quieter model</h2>
+<p>I had grown up in an environment where leadership was performed - measured in visibility, in titles, in being seen to do the right thing. My year as VP slowly replaced that model with something quieter.</p>
+<p>Leadership, I came to understand, is the <strong>quality of the environment you create</strong> for the people around you. It is whether someone feels safe enough to walk up to you with a worry. It is whether your team can disagree with you. It is the space between the events - the conversations, the follow-throughs, the moments nobody photographs.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>The discovery about delegation.</strong> I also learned the hard way that trying to carry everything yourself is not strength. Delegation felt like relinquishing control initially, but I learned it was actually an act of trust in the people around you, and in the process itself. The events I am most proud of were not the ones I managed most tightly. They were the ones where I gave my team room to own something.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="what-i-carry-forward" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-carry-forward">What I carry forward</h2>
+<p>The Students’ Union Leadership Award I received at the end of the year meant a great deal to me. But what I carry forward is not the award. It is the understanding that leadership is not about being indispensable - it is about <strong>making others feel that they are</strong>.</p>
+
+
+<!-- -->
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Leadership</category>
+  <category>Reflection</category>
+  <guid>https://sritanya.github.io/blog/posts/vp-leadership.html</guid>
+  <pubDate>Sun, 14 Apr 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://sritanya.github.io/images/blog-vp.svg" medium="image" type="image/svg+xml"/>
+</item>
+</channel>
+</rss>

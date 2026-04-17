@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1F2937"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g2)"/>
+  <g transform="translate(500, 90)">
+    <!-- bar chart -->
+    <rect x="0"   y="120" width="38" height="220" fill="#7FAE96"/>
+    <rect x="58"  y="80"  width="38" height="260" fill="#7FAE96" opacity="0.85"/>
+    <rect x="116" y="180" width="38" height="160" fill="#7FAE96" opacity="0.7"/>
+    <rect x="174" y="40"  width="38" height="300" fill="#F59E0B"/>
+    <rect x="232" y="140" width="38" height="200" fill="#7FAE96" opacity="0.55"/>
+    <line x1="-10" y1="340" x2="290" y2="340" stroke="#E8EAED" stroke-width="1.5"/>
+  </g>
+  <g>
+    <text x="56" y="92" font-family="Inter, sans-serif" font-size="14" letter-spacing="6" fill="#7FAE96">PROJECT / HR ANALYTICS</text>
+    <text x="56" y="160" font-family="Georgia, 'Instrument Serif', serif" font-size="58" fill="#E8EAED">Employee Attrition</text>
+    <text x="56" y="210" font-family="Inter, sans-serif" font-size="20" fill="#9CA3AF">SVM · Recall 59.6 · ROC-AUC 0.76</text>
+  </g>
+</svg>

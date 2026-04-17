@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#2D5F4E"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <g transform="translate(540, 160)" fill="none" stroke="#FDFCF9" stroke-width="2" opacity="0.85">
+    <circle cx="0"   cy="0" r="40"/>
+    <circle cx="70"  cy="0" r="40"/>
+    <circle cx="140" cy="0" r="40"/>
+    <line x1="40" y1="0" x2="30" y2="0"/>
+    <line x1="110" y1="0" x2="100" y2="0"/>
+  </g>
+  <text x="56" y="120" font-family="Inter, sans-serif" font-size="14" letter-spacing="6" fill="#FEF3C7">BLOG · CAREER</text>
+  <text x="56" y="200" font-family="Georgia, 'Instrument Serif', serif" font-size="54" fill="#FDFCF9">Why I Chose</text>
+  <text x="56" y="260" font-family="Georgia, 'Instrument Serif', serif" font-size="54" fill="#FDFCF9">People Over Code</text>
+</svg>

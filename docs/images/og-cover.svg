@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDFCF9"/>
+      <stop offset="100%" stop-color="#D8E4DD"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g transform="translate(100, 160)">
+    <text font-family="Georgia, 'Instrument Serif', serif" font-size="96" fill="#0F172A">Sritanya Suresh Andal</text>
+    <text y="120" font-family="Inter, sans-serif" font-size="32" fill="#52606D">MSc Business Analytics · Dublin City University</text>
+    <text y="220" font-family="Inter, sans-serif" font-size="22" letter-spacing="4" fill="#2D5F4E">DATA · STRATEGY · PEOPLE</text>
+  </g>
+</svg>
