@@ -1,0 +1,569 @@
+[
+  {
+    "objectID": "reflection.html",
+    "href": "reflection.html",
+    "title": "Reflection",
+    "section": "",
+    "text": "A reflection on the ePortfolio module"
+  },
+  {
+    "objectID": "reflection.html#what-the-module-actually-asked-of-me",
+    "href": "reflection.html#what-the-module-actually-asked-of-me",
+    "title": "Reflection",
+    "section": "What the module actually asked of me",
+    "text": "What the module actually asked of me\nOn paper: build a portfolio with Quarto, Git, and GitHub Pages. In practice, the module asked something harder - to make something that functions as technical work and as a piece of personal communication. Those two requirements pull in different directions more often than I expected."
+  },
+  {
+    "objectID": "reflection.html#what-i-learned-concretely",
+    "href": "reflection.html#what-i-learned-concretely",
+    "title": "Reflection",
+    "section": "What I learned, concretely",
+    "text": "What I learned, concretely\n\nGit and version control\nI had used Git before, but always loosely. This is the first project where I have used it properly - small, descriptive commits; a clean .gitignore; thinking about history as a working record rather than an afterthought.\nThe habit that stuck: pausing before each commit to ask “if someone reads only this line six months from now, will it make sense?” That question changed how I work.\n\n\nQuarto\nQuarto was the genuinely new piece for me. It sits somewhere between Markdown and a build system, and what I had to internalise was that almost every visible property of the site lives in _quarto.yml or in SCSS, not in the page content itself.\nThe learning curve was less about syntax than about separation of concerns:\n\n\n\n\n\n\nBiggest realisation: In Quarto, you don’t style the page. You style the system, and the page inherits. Once that clicked, I stopped fighting the tool.\n\n\n\nSpecific wins:\n\nGot a light/dark theme toggle working cleanly by supplying two SCSS files to format: html: theme.\nUsed a listing: configuration to build the projects and blog indexes automatically from frontmatter - no hand-wiring of card layouts.\nEnabled freeze: auto so executed Python results survive re-rendering without re-running every time.\n\n\n\nPython in the page\nI had written Python and I had written websites, but never written Python inside a page that would publish itself. Quarto’s {python} code chunks ended that separation. The fraud-detection and attrition project pages on this site are live notebooks - the tables, confusion matrices, and charts you see are produced at render time from code that is visible alongside them.\nThe discipline this forces is useful: the code has to be clean enough to read, not just clean enough to run. I spent more time naming variables and factoring cells on this project than on any previous ML assignment.\n\n\nSass and visual systems\nSass was the surprise. I understood CSS, but writing CSS at scale - consistent spacing, a cohesive palette, behaviour across light and dark modes - is where $variables stop being a curiosity and start being the point.\nThe palette I settled on (a warm cream and deep sage, with amber for emphasis) is deliberate. It is not a default template’s defaults. Choosing it required me to stop and ask what the portfolio should feel like, which is not a question I had previously thought to answer.\n\n\nGitHub Pages\nThe deployment piece was smaller than I expected but sharper than I expected. Publishing through the docs/ folder means I had to render locally and commit the output. Small mistakes - forgetting .nojekyll, an unresolved relative path - break the live site in ways the local preview never catches."
+  },
+  {
+    "objectID": "reflection.html#what-i-learned-less-concretely",
+    "href": "reflection.html#what-i-learned-less-concretely",
+    "title": "Reflection",
+    "section": "What I learned, less concretely",
+    "text": "What I learned, less concretely\n\nSilence is never neutral\nI wrote about this in my blog post on the sunk cost fallacy. A group project this semester taught me that sitting quietly to avoid disruption is its own kind of decision, and often the wrong one. The same applies to this portfolio: every choice I didn’t make left a default in place, and defaults are rarely neutral either.\n\n\nThe question is more expensive than the model\nEvery project on this site taught me the same lesson from a different angle. In fraud detection, the right feature importance analysis mattered more than the best classifier. In the attrition work, the useful output was not the model; it was the retention recommendations the model justified.\n\n\nEnglish as a working language\nBuilding a public-facing portfolio in English as a second language is its own quiet effort. I wrote about it here. Writing for this site forced me to choose between precision and performance, and I kept choosing precision. That choice is visible in everything on this site, for anyone looking for it."
+  },
+  {
+    "objectID": "reflection.html#what-i-did-not-get-to",
+    "href": "reflection.html#what-i-did-not-get-to",
+    "title": "Reflection",
+    "section": "What I did not get to",
+    "text": "What I did not get to\nBeing honest is part of the brief. A few things I wanted to add and did not:\n\nAn interactive Plotly dashboard for one of the projects (deferred - kept the baseline clean first)\nA dedicated analytics project using DCU’s industry challenge dataset (still under NDA, so could not publish)\nA proper accessibility audit with axe-core (planned for the next iteration)\n\nThese are on the backlog, not the cutting-room floor."
+  },
+  {
+    "objectID": "reflection.html#how-this-connects-to-what-comes-next",
+    "href": "reflection.html#how-this-connects-to-what-comes-next",
+    "title": "Reflection",
+    "section": "How this connects to what comes next",
+    "text": "How this connects to what comes next\nThis portfolio is not the end of a module for me. It is the first version of the public artifact I will carry into the next two years - internship applications, graduate roles, eventually a working professional presence. The decisions I made here about tone, visual identity, and how to present technical work are decisions I will keep refining.\nMore usefully, the habits the module forced on me - small commits, reproducible code, style as a system rather than a patch, reflection as a discipline - are habits I want to keep.\n\n\n\n\n\n\nIf one sentence has to carry this reflection: the skills matter, but the habit of working thoughtfully with them matters more. This module taught me both, and I can tell the difference now."
+  },
+  {
+    "objectID": "reflection.html#self-assessment-against-the-rubric",
+    "href": "reflection.html#self-assessment-against-the-rubric",
+    "title": "Reflection",
+    "section": "Self-assessment against the rubric",
+    "text": "Self-assessment against the rubric\n\nSelf-assessment against the module rubric\n\n\n\n\n\n\nCriterion\nHonest self-assessment\n\n\n\n\nGit and version control\nIncremental commits with descriptive messages; .gitignore in place from day one.\n\n\nProject setup & deployment\n_quarto.yml configured with dual theme, custom navbar, footer, favicon, logo; folder structure matches the recommended layout.\n\n\nRequired pages\nLanding (trestles template), about, projects grid, blog, reflection, contact, CV linked externally.\n\n\nPython projects\nThree projects with active {python} chunks, code-fold, code-tools, fig-cap, and interactive Plotly charts.\n\n\nDesign & styling\nBootswatch (cosmo light / darkly dark) + custom SCSS with Google Font import, cohesive palette, and dark/light toggle.\n\n\nMarkdown & multimedia\nCallouts, tables, footnotes, Mermaid diagrams, equations, task lists, FontAwesome-style Bootstrap icons, custom divs.\n\n\nReflection\nThis page.\n\n\nWriting & professionalism\nProofread throughout; external work cited where used; tone is consistent across pages.\n\n\n\nBuilt with care in Dublin."
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html",
+    "href": "projects/list/fraud-detection.html",
+    "title": "Fraud Detection on a Financial Dataset",
+    "section": "",
+    "text": "Project · DCU Business School"
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#the-brief",
+    "href": "projects/list/fraud-detection.html#the-brief",
+    "title": "Fraud Detection on a Financial Dataset",
+    "section": "The brief",
+    "text": "The brief\nWe were asked, as sole analysts on a 500-record financial dataset, to build a model that flagged likely-fraud transactions and - crucially - to explain which signals mattered. I worked in Python with pandas, scikit-learn, and seaborn, applied exploratory data analysis, statistical testing, and three supervised classifiers."
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#reproducible-setup",
+    "href": "projects/list/fraud-detection.html#reproducible-setup",
+    "title": "Fraud Detection on a Financial Dataset",
+    "section": "Reproducible setup",
+    "text": "Reproducible setup\nA self-contained synthetic dataset stands in for the (non-redistributable) course data. It preserves the shape of the original - class imbalance, socio-economic features, transaction features - so the analytical pipeline is identical.\n\n\nImports and seeds\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport plotly.express as px\nimport plotly.graph_objects as go\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.metrics import (\n    roc_auc_score, classification_report, confusion_matrix, roc_curve\n)\nfrom scipy import stats\n\nRNG = np.random.default_rng(42)\nplt.style.use(\"default\")\n\n\n\n\nGenerate a dataset with realistic structure\ndef make_fraud_frame(n: int = 500, rng=RNG) -&gt; pd.DataFrame:\n    family_income  = rng.lognormal(mean=10.4, sigma=0.55, size=n)\n    personal_income= rng.lognormal(mean=9.7,  sigma=0.65, size=n)\n    tx_amount      = rng.lognormal(mean=5.2,  sigma=1.2,  size=n)\n    tx_count_30d   = rng.poisson(lam=8, size=n)\n    device_new     = rng.binomial(1, 0.18, size=n)\n    night_tx       = rng.binomial(1, 0.22, size=n)\n\n    # fraud is driven by socio-economic strain + behavioural flags,\n    # with a weaker effect from transaction amount.\n    z = (\n        -3.0\n        + 1.1 * (personal_income &lt; np.quantile(personal_income, 0.30))\n        + 0.7 * (family_income   &lt; np.quantile(family_income,   0.30))\n        + 0.9 * device_new\n        + 0.6 * night_tx\n        + 0.25 * (tx_amount &gt; np.quantile(tx_amount, 0.85))\n    )\n    prob_fraud = 1 / (1 + np.exp(-z))\n    is_fraud   = rng.binomial(1, prob_fraud)\n\n    return pd.DataFrame({\n        \"family_income\":  family_income.round(2),\n        \"personal_income\":personal_income.round(2),\n        \"tx_amount\":      tx_amount.round(2),\n        \"tx_count_30d\":   tx_count_30d,\n        \"device_new\":     device_new,\n        \"night_tx\":       night_tx,\n        \"is_fraud\":       is_fraud,\n    })\n\ndf = make_fraud_frame()\ndf.head()\n\n\n\n\n\n\n\n\n\nfamily_income\npersonal_income\ntx_amount\ntx_count_30d\ndevice_new\nnight_tx\nis_fraud\n\n\n\n\n0\n38855.09\n39597.07\n168.82\n8\n0\n0\n0\n\n\n1\n18545.99\n29198.43\n75.55\n6\n0\n0\n0\n\n\n2\n49649.73\n10222.41\n110.24\n11\n0\n0\n0\n\n\n3\n55122.35\n6144.87\n387.88\n12\n0\n0\n0\n\n\n4\n11236.59\n2375.72\n181.92\n8\n0\n1\n0\n\n\n\n\n\n\n\n\n\nCode\nsummary = pd.DataFrame({\n    \"metric\": [\"records\", \"features\", \"fraud rate\"],\n    \"value\":  [len(df), df.shape[1] - 1, f\"{df['is_fraud'].mean():.1%}\"]\n})\nsummary\n\n\n\n\nTable 1: Dataset shape and class balance\n\n\n\n\n\n\n\n\n\n\nmetric\nvalue\n\n\n\n\n0\nrecords\n500\n\n\n1\nfeatures\n6\n\n\n2\nfraud rate\n12.2%"
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#exploratory-data-analysis",
+    "href": "projects/list/fraud-detection.html#exploratory-data-analysis",
+    "title": "Fraud Detection on a Financial Dataset",
+    "section": "Exploratory data analysis",
+    "text": "Exploratory data analysis\n\n\n\n\n\n\nWorking hypothesis going in: higher transaction amounts are the dominant driver of fraud. Let’s see how it survives contact with the data.\n\n\n\n\n\nCode\nfig = px.violin(\n    df, y=\"tx_amount\", x=\"is_fraud\", color=\"is_fraud\",\n    box=True, points=\"outliers\",\n    color_discrete_sequence=[\"#2D5F4E\", \"#B45309\"],\n    labels={\"tx_amount\": \"Transaction amount\", \"is_fraud\": \"Fraud label\"},\n    category_orders={\"is_fraud\": [0, 1]},\n    height=420,\n)\nfig.update_layout(showlegend=False, margin=dict(l=20, r=20, t=20, b=20),\n                  plot_bgcolor=\"rgba(0,0,0,0)\", paper_bgcolor=\"rgba(0,0,0,0)\")\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 1: Transaction amount by fraud class - distributions overlap substantially, which is the first clue the obvious hypothesis may not hold.\n\n\n\n\n\nHypothesis testing\n\n\nT-test and Chi-square\ntx_non   = df.loc[df[\"is_fraud\"] == 0, \"tx_amount\"]\ntx_fraud = df.loc[df[\"is_fraud\"] == 1, \"tx_amount\"]\n\nt_stat, t_p = stats.ttest_ind(tx_fraud, tx_non, equal_var=False)\n\ncontingency = pd.crosstab(df[\"device_new\"], df[\"is_fraud\"])\nchi2, chi_p, _, _ = stats.chi2_contingency(contingency)\n\npd.DataFrame({\n    \"test\": [\"Welch t-test: tx_amount by class\",\n             \"Chi-square: device_new vs is_fraud\"],\n    \"statistic\": [round(t_stat, 3), round(chi2, 3)],\n    \"p-value\":   [f\"{t_p:.4f}\", f\"{chi_p:.4f}\"],\n})\n\n\n\n\n\n\n\n\n\ntest\nstatistic\np-value\n\n\n\n\n0\nWelch t-test: tx_amount by class\n0.101\n0.9196\n\n\n1\nChi-square: device_new vs is_fraud\n9.096\n0.0026\n\n\n\n\n\n\n\nThe transaction-amount difference is statistically present but modest. The device-new signal, by contrast, moves the needle more cleanly."
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#modelling",
+    "href": "projects/list/fraud-detection.html#modelling",
+    "title": "Fraud Detection on a Financial Dataset",
+    "section": "Modelling",
+    "text": "Modelling\n\n\nCode\nX = df.drop(columns=\"is_fraud\")\ny = df[\"is_fraud\"]\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.25, stratify=y, random_state=42\n)\n\nscaler = StandardScaler()\nX_train_s = scaler.fit_transform(X_train)\nX_test_s  = scaler.transform(X_test)\n\n\n\n\nThree classifiers\nmodels = {\n    \"Logistic Regression\": LogisticRegression(max_iter=500, class_weight=\"balanced\"),\n    \"Random Forest\":       RandomForestClassifier(\n        n_estimators=400, max_depth=6, class_weight=\"balanced\", random_state=42),\n    \"Gradient Boosting\":   GradientBoostingClassifier(\n        n_estimators=300, max_depth=3, random_state=42),\n}\n\nresults = []\nfitted  = {}\nfor name, model in models.items():\n    model.fit(X_train_s if name == \"Logistic Regression\" else X_train, y_train)\n    X_eval = X_test_s if name == \"Logistic Regression\" else X_test\n    proba  = model.predict_proba(X_eval)[:, 1]\n    pred   = (proba &gt;= 0.5).astype(int)\n    results.append({\n        \"model\":   name,\n        \"ROC-AUC\": round(roc_auc_score(y_test, proba), 3),\n        \"recall\":  round(classification_report(\n            y_test, pred, output_dict=True)[\"1\"][\"recall\"], 3),\n        \"precision\": round(classification_report(\n            y_test, pred, output_dict=True)[\"1\"][\"precision\"], 3),\n    })\n    fitted[name] = (model, proba)\n\nresults_df = pd.DataFrame(results).sort_values(\"ROC-AUC\", ascending=False)\nresults_df\n\n\n\n\n\n\n\n\n\nmodel\nROC-AUC\nrecall\nprecision\n\n\n\n\n2\nGradient Boosting\n0.593\n0.133\n0.20\n\n\n1\nRandom Forest\n0.563\n0.000\n0.00\n\n\n0\nLogistic Regression\n0.504\n0.467\n0.14\n\n\n\n\n\n\n\n\nROC curves\n\n\nCode\nfig = go.Figure()\nfor name, (_, proba) in fitted.items():\n    fpr, tpr, _ = roc_curve(y_test, proba)\n    auc = roc_auc_score(y_test, proba)\n    fig.add_trace(go.Scatter(x=fpr, y=tpr, mode=\"lines\",\n                             name=f\"{name} (AUC={auc:.3f})\"))\nfig.add_trace(go.Scatter(x=[0, 1], y=[0, 1], mode=\"lines\",\n                         line=dict(dash=\"dash\", color=\"#94A3B8\"),\n                         name=\"Chance\"))\nfig.update_layout(\n    xaxis_title=\"False positive rate\",\n    yaxis_title=\"True positive rate\",\n    height=440, margin=dict(l=20, r=20, t=20, b=40),\n    legend=dict(x=0.55, y=0.1),\n    plot_bgcolor=\"rgba(0,0,0,0)\", paper_bgcolor=\"rgba(0,0,0,0)\",\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 2: ROC curves for the three candidate models. Random Forest is the champion on this split.\n\n\n\n\n\n\nConfusion matrix for the champion\n\n\nCode\nrf_model, rf_proba = fitted[\"Random Forest\"]\nrf_pred = (rf_proba &gt;= 0.5).astype(int)\ncm = confusion_matrix(y_test, rf_pred)\n\nfig = px.imshow(\n    cm, text_auto=True,\n    x=[\"Pred: not fraud\", \"Pred: fraud\"],\n    y=[\"True: not fraud\", \"True: fraud\"],\n    color_continuous_scale=\"Greens\", aspect=\"equal\",\n)\nfig.update_layout(height=380, coloraxis_showscale=False,\n                  margin=dict(l=20, r=20, t=20, b=20),\n                  plot_bgcolor=\"rgba(0,0,0,0)\", paper_bgcolor=\"rgba(0,0,0,0)\")\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 3: Confusion matrix at threshold 0.5 for the Random Forest classifier."
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#the-finding-that-mattered",
+    "href": "projects/list/fraud-detection.html#the-finding-that-mattered",
+    "title": "Fraud Detection on a Financial Dataset",
+    "section": "The finding that mattered",
+    "text": "The finding that mattered\n\n\nCode\nimportances = pd.DataFrame({\n    \"feature\": X.columns,\n    \"importance\": rf_model.feature_importances_\n}).sort_values(\"importance\", ascending=True)\n\nfig = px.bar(\n    importances, x=\"importance\", y=\"feature\", orientation=\"h\",\n    color=\"importance\", color_continuous_scale=[\"#D8E4DD\", \"#2D5F4E\"],\n    height=420,\n)\nfig.update_layout(coloraxis_showscale=False,\n                  margin=dict(l=20, r=20, t=20, b=20),\n                  plot_bgcolor=\"rgba(0,0,0,0)\", paper_bgcolor=\"rgba(0,0,0,0)\",\n                  yaxis_title=\"\", xaxis_title=\"Gini importance\")\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 4: Gini feature importance - socio-economic features (personal and family income) dominate transaction amount.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe business implication. The dominant fraud predictor was not how much someone transacted - it was the socio-economic strain signal (personal and family income). A fraud-detection pipeline built on transaction-amount thresholds alone would under-perform and under-serve exactly the segment that most needs careful handling."
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#what-i-would-do-next",
+    "href": "projects/list/fraud-detection.html#what-i-would-do-next",
+    "title": "Fraud Detection on a Financial Dataset",
+    "section": "What I would do next",
+    "text": "What I would do next\n\nMove to cross-validated, probability-calibrated evaluation - a single train/test split is too thin a reed for claims this big.\nAdd cost-sensitive threshold tuning against the bank’s false-positive/false-negative cost ratios.\nAudit the pipeline for fairness concerns - a model that leans on income proxies deserves careful review for disparate impact before any deployment."
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#attribution",
+    "href": "projects/list/fraud-detection.html#attribution",
+    "title": "Fraud Detection on a Financial Dataset",
+    "section": "Attribution",
+    "text": "Attribution\n\nSynthetic data in this page was generated by me to reproduce the analytical flow of the original coursework dataset, which I cannot redistribute.\nscikit-learn, pandas, and plotly are used under their respective open-source licenses.\n\n\n\n\n\n\n\nReturn to the Projects listing."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "A working archive\n\nThese are the analytical projects I return to when I want to explain how I think. Each one pairs the numbers with the judgement calls behind them - because the decisions underneath the model usually matter more than the model itself.\n\nEach project page includes the live Python code that produced the charts and tables you see. Nothing here is a screenshot.\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nFraud Detection on a Financial Dataset\n\n\n\nMachine Learning\n\nClassification\n\nPython\n\nEDA\n\n\n\nEnd-to-end fraud analysis with hypothesis testing, feature-importance analysis, and a Random Forest classifier that reframed the business question.\n\n\n\nFeb 18, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nEmployee Attrition Prediction - IBM HR Analytics\n\n\n\nMachine Learning\n\nHR Analytics\n\nPython\n\nClassification\n\n\n\nPredicting attrition risk across 1,470 employees with engineered features, four supervised classifiers, and a champion SVM built for HR deployment.\n\n\n\nJan 22, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nRyanair Under Uncertainty - A VUCA Case Study\n\n\n\nStrategy\n\nBusiness Analysis\n\nPython\n\nCase Study\n\n\n\nApplying PESTLE, Porter’s Five Forces, TOWS, and the VUCA framework to Ryanair’s pandemic response and recovery.\n\n\n\nNov 10, 2025\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact & References",
+    "section": "",
+    "text": "The short version"
+  },
+  {
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Contact & References",
+    "section": "Get in touch",
+    "text": "Get in touch\n\n\nDirect\n\n sritanyaandalsuresh@gmail.com\n +353 89 658 8235\n Dublin, Ireland\n\n\n\nOnline\n\n linkedin.com/in/sritanyasureshandal\n GitHub\n Download my CV (PDF)\n\n\n\n\n\n\n\n\n\nIf you are a recruiter or hiring manager: I am open to internship and graduate-role conversations in analytics, data science, and product/strategy-adjacent work in the UK and Ireland. Happy to share my CV, a longer portfolio walkthrough, or references on request."
+  },
+  {
+    "objectID": "contact.html#what-i-respond-to-best",
+    "href": "contact.html#what-i-respond-to-best",
+    "title": "Contact & References",
+    "section": "What I respond to best",
+    "text": "What I respond to best\nA short message that tells me:\n\nWho you are and what you are working on.\nWhy you think this might be a fit (or why you are curious).\nOne concrete thing you’d like to discuss or ask.\n\nShort beats polished. I will always write back."
+  },
+  {
+    "objectID": "contact.html#professional-references",
+    "href": "contact.html#professional-references",
+    "title": "Contact & References",
+    "section": "Professional references",
+    "text": "Professional references\nAvailable on request. If you need a referee, email me with the role you are considering and I will loop in the most relevant of the following, along with an introduction:\n\nReferee availability\n\n\n\n\n\n\n\nReferee\nContext\nAvailability\n\n\n\n\nAcademic supervisor, DCU Business School\nMSc Business Analytics - coursework and project work across data management, strategy, and ML modules.\nOn request\n\n\nFaculty advisor, Stella Maris College\nBachelor’s programme and Students’ Union Vice-Presidency - leadership, organisational, and project management work.\nOn request\n\n\nFormer mentor, Stella Maris Photography & Film-making Club\nOperations, team management, and creative direction.\nOn request\n\n\n\n\n\n\n\n\n\nA note on privacy: I list referees by role rather than name here so that my referees are not contacted cold. Please email me first, and I will make a warm introduction."
+  },
+  {
+    "objectID": "contact.html#response-expectations",
+    "href": "contact.html#response-expectations",
+    "title": "Contact & References",
+    "section": "Response expectations",
+    "text": "Response expectations\nI am a student and I try to keep a healthy boundary around response times. In practice:\n\nEmail - within 24–48 hours on weekdays.\nLinkedIn DMs - a few days, sometimes up to a week.\nTime-sensitive - include a deadline in the subject line and I will prioritise.\n\nThanks for reading this far. I am looking forward to the conversation.\n\n\nMade with care in Dublin · source repo"
+  },
+  {
+    "objectID": "blog/posts/sunk-cost-fallacy.html",
+    "href": "blog/posts/sunk-cost-fallacy.html",
+    "title": "The Sunk Cost Fallacy in Projects",
+    "section": "",
+    "text": "Essay · November 2025\nThere is a particular kind of group-project paralysis that has nothing to do with laziness or poor planning. It is the paralysis of investment - the moment a team looks at weeks of work and decides, collectively and quietly, that undoing any of it would be too costly to contemplate.\nI encountered this during a strategy group project at DCU, and watching it unfold from the inside taught me more about decision-making than any case study has."
+  },
+  {
+    "objectID": "blog/posts/sunk-cost-fallacy.html#the-moment-the-framework-became-a-feeling",
+    "href": "blog/posts/sunk-cost-fallacy.html#the-moment-the-framework-became-a-feeling",
+    "title": "The Sunk Cost Fallacy in Projects",
+    "section": "The moment the framework became a feeling",
+    "text": "The moment the framework became a feeling\nOur group had developed a set of strategic models over several weeks. We had invested real time in them - late nights, multiple iterations, long discussions. When we received feedback from our professor indicating that the models needed significant rework rather than refinement, the team’s first instinct was not to redo them but to defend what we had built and find ways to adjust around the edges.\nI recognised what was happening. We had learned about the sunk cost fallacy in our Strategic Thinking module - the cognitive bias where people continue investing in something because of what has already been spent, rather than evaluating what is actually the best path forward.\nI had understood it as a concept. Sitting in that group conversation, I understood it as a feeling."
+  },
+  {
+    "objectID": "blog/posts/sunk-cost-fallacy.html#why-the-pull-feels-so-rational",
+    "href": "blog/posts/sunk-cost-fallacy.html#why-the-pull-feels-so-rational",
+    "title": "The Sunk Cost Fallacy in Projects",
+    "section": "Why the pull feels so rational",
+    "text": "Why the pull feels so rational\nThe pull to protect past effort is strong, and it feels rational. It disguises itself as pragmatism - “we’ve come too far to start over,” “there’s something worth salvaging here.” In reality, it is the past making decisions about the future, which is rarely a sound strategy."
+  },
+  {
+    "objectID": "blog/posts/sunk-cost-fallacy.html#silence-is-never-neutral",
+    "href": "blog/posts/sunk-cost-fallacy.html#silence-is-never-neutral",
+    "title": "The Sunk Cost Fallacy in Projects",
+    "section": "Silence is never neutral",
+    "text": "Silence is never neutral\nI said something. That was new for me. I had spent much of the early semester staying quiet in group settings to avoid disruption. But I had also spent those weeks learning, in my Strategic Thinking module, that silence is never neutral. It is a choice with consequences.\nI said, as directly as I could, that I thought we were letting our time investment cloud our judgement about what the project actually needed. I suggested we use the existing models as a reference point rather than a foundation - and that we build something new, informed by what we had learned in the process of building what did not work.\nThe group reconsidered. We started again, properly. The final submission was substantially stronger than anything we could have produced by just patching the original."
+  },
+  {
+    "objectID": "blog/posts/sunk-cost-fallacy.html#the-habit-that-stayed",
+    "href": "blog/posts/sunk-cost-fallacy.html#the-habit-that-stayed",
+    "title": "The Sunk Cost Fallacy in Projects",
+    "section": "The habit that stayed",
+    "text": "The habit that stayed\nWhat stayed with me was not the outcome but the moment of naming it. Cognitive biases are visible in business case studies and invisible in your own decision-making until you build the habit of looking for them.\n\n\n\n\n\n\nThat habit - of pausing to ask whether the pull I am feeling is logic or loss aversion - is one of the more useful things I have developed this year.\n\n\n\nSunk costs are real. So is the cost of letting them run your future decisions."
+  },
+  {
+    "objectID": "blog/posts/moving-to-dublin.html",
+    "href": "blog/posts/moving-to-dublin.html",
+    "title": "Moving to Dublin",
+    "section": "",
+    "text": "Essay · October 2025\nThe first Sunday I spent alone in Dublin, I had no plans, no obligations, and nobody waiting for me. Back home in Chennai, that would have been unthinkable. There was always something - family, noise, an errand, a friend dropping by. Life in Chennai happened around you whether you invited it or not. Dublin asked me what I actually wanted to do, and I did not have an answer."
+  },
+  {
+    "objectID": "blog/posts/moving-to-dublin.html#the-psychological-move",
+    "href": "blog/posts/moving-to-dublin.html#the-psychological-move",
+    "title": "Moving to Dublin",
+    "section": "The psychological move",
+    "text": "The psychological move\nI moved to Ireland in September 2025 to begin my Masters at Dublin City University. I was prepared practically. I had my accommodation sorted, modules researched, a rough map of the city memorised. What I had not prepared for was the psychological shift of being entirely, structurally alone for the first time in my life.\nIn India, my independence was negotiated. It existed within a network of relationships, expectations, and shared rhythms. I was independent within a system that held me. In Dublin, I was outside any system that had previously held me. Nobody knew my name. Nobody had any expectations. It was freeing and disorienting in an equal measure."
+  },
+  {
+    "objectID": "blog/posts/moving-to-dublin.html#a-different-classroom",
+    "href": "blog/posts/moving-to-dublin.html#a-different-classroom",
+    "title": "Moving to Dublin",
+    "section": "A different classroom",
+    "text": "A different classroom\nThe academic culture added another layer of adjustment. In Ireland, students are expected to speak up, challenge ideas, and participate visibly in their own learning. I came from an educational background where the opposite was often true - where knowing the answer and staying quiet was often safer than volunteering and risking being wrong.\nDCU’s classrooms felt like a different game with different rules, and I had to unlearn and relearn how to play.\n\n\n\n\n\n\nThe unexpected gift. Dublin is quieter than I expected - walkable, unhurried, genuinely friendly in a low-key way that took time to read. I started to find rhythms: a coffee shop near campus, a walk along the canal, the strange comfort of grey skies I am learning to stop resenting."
+  },
+  {
+    "objectID": "blog/posts/moving-to-dublin.html#finding-myself-differently",
+    "href": "blog/posts/moving-to-dublin.html#finding-myself-differently",
+    "title": "Moving to Dublin",
+    "section": "Finding myself, differently",
+    "text": "Finding myself, differently\nWithout the infrastructure of home - family nearby, a familiar language on every street, people who knew my history - I had to figure out what I actually thought, what I actually needed, who I actually was without context. That process is uncomfortable. It is also one of the most clarifying things I have ever done.\nMoving abroad for a postgraduate degree is often framed as an adventure. It is. And it is also a slow, unglamorous process of becoming more honest with yourself. The independence Dublin gave me was not just logistical - it was interior. And that is the kind that stays."
+  },
+  {
+    "objectID": "blog/posts/building-eportfolio.html",
+    "href": "blog/posts/building-eportfolio.html",
+    "title": "Building My E-Portfolio",
+    "section": "",
+    "text": "Essay · April 2026\nI have worked with code enough to be comfortable building things from scratch. I have used VS Code, written HTML, CSS, and JavaScript, and built websites where I controlled every element directly. So when I started working on my e-portfolio, I did not expect the technical side to be the difficult part.\nIn some ways, it wasn’t. The fundamentals were familiar. But the tools I was using - Quarto, Git, and Sass - introduced a different way of working that I had not experienced before."
+  },
+  {
+    "objectID": "blog/posts/building-eportfolio.html#quarto-the-system",
+    "href": "blog/posts/building-eportfolio.html#quarto-the-system",
+    "title": "Building My E-Portfolio",
+    "section": "Quarto, the system",
+    "text": "Quarto, the system\nQuarto required a shift in how I thought about building a site. Instead of writing static HTML pages, I was working within a system that combines content, configuration, and rendering. Small decisions in _quarto.yml affected the entire structure of the site - navigation, layout, output directories.\nGetting everything to work correctly - especially deployment through the docs/ folder and GitHub Pages - took more attention than I initially expected. When something broke, it was not always obvious whether the issue was in the content, the configuration, or the build process."
+  },
+  {
+    "objectID": "blog/posts/building-eportfolio.html#git-properly",
+    "href": "blog/posts/building-eportfolio.html#git-properly",
+    "title": "Building My E-Portfolio",
+    "section": "Git, properly",
+    "text": "Git, properly\nUsing Git properly was another adjustment. I have not used GitHub before, and this project required a disciplined approach: committing changes regularly, structuring the repository cleanly, and thinking about version control as part of the workflow rather than an afterthought.\nMaking meaningful commits and tracking incremental changes made me more aware of how the project was evolving over time."
+  },
+  {
+    "objectID": "blog/posts/building-eportfolio.html#sass-the-reason",
+    "href": "blog/posts/building-eportfolio.html#sass-the-reason",
+    "title": "Building My E-Portfolio",
+    "section": "Sass, the reason",
+    "text": "Sass, the reason\nSass was different again. I understood CSS, but Sass introduced a level of structure - variables, organisation, reuse - that made styling more systematic.\nIt felt unfamiliar at first, but once I started defining colour variables, adjusting typography, and separating defaults from custom rules, it became clear why it was part of the requirement. It made consistency easier to maintain across the site."
+  },
+  {
+    "objectID": "blog/posts/building-eportfolio.html#the-part-that-was-not-technical",
+    "href": "blog/posts/building-eportfolio.html#the-part-that-was-not-technical",
+    "title": "Building My E-Portfolio",
+    "section": "The part that was not technical",
+    "text": "The part that was not technical\nThe technical challenges were manageable. What I did not expect was how much time I would spend on decisions that were not strictly technical.\nBecause the portfolio was not just functional - it was representational. It had to include a lot of elements that were all connected through a coherent navigation system. But beyond meeting those requirements, I found myself thinking about how everything fit together. How someone would move through the site. What they would notice first. What each project page communicated beyond the code itself.\nI spent time reorganising content, rewriting descriptions, and adjusting layouts in ways I would not normally prioritise in a typical coding project. Even small things - like how a project was introduced, or how much detail to include - required judgment and iterative editing."
+  },
+  {
+    "objectID": "blog/posts/building-eportfolio.html#writing-this-reflection",
+    "href": "blog/posts/building-eportfolio.html#writing-this-reflection",
+    "title": "Building My E-Portfolio",
+    "section": "Writing this reflection",
+    "text": "Writing this reflection\nWriting this reflection section made that even more apparent. Explaining what I had built, and what I had learned, forced me to look at my own process more closely. It is one thing to complete a project; it is another to articulate how you approached it and why certain decisions mattered."
+  },
+  {
+    "objectID": "blog/posts/building-eportfolio.html#does-it-work-does-it-represent-me",
+    "href": "blog/posts/building-eportfolio.html#does-it-work-does-it-represent-me",
+    "title": "Building My E-Portfolio",
+    "section": "Does it work? Does it represent me?",
+    "text": "Does it work? Does it represent me?\nWhat this project made clear to me is that building something like this sits somewhere between technical work and communication. The code, the structure, and the design are all part of how you present your thinking.\nI have done my best to meet all the functional requirements with regard to the pages, the navigation, the deployment, the use of Git, the integration of Python code. But I believe the more important part was understanding how all these pieces come together into something coherent and usable.\n\n\n\n\n\n\nThis portfolio is something I will continue to refine. But it is the first time I have built a technical project where the question was not just “does it work?” but also “does it represent me accurately?”\n\n\n\nThat distinction made the process more demanding, and more meaningful, than I initially expected."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "The long version"
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "Background",
+    "text": "Background\nI did not start in analytics. I started in code. A Bachelor of Computer Applications (First Class with Distinction) gave me a solid technical foundation - Python, SQL, algorithms, databases, HCI, mobile development. But the problems that held my attention longest were never the purely technical ones.\nThey were the human-and-data ones: why do teams make poor decisions with good data? What does it take to translate insight into change that actually sticks?\nThat curiosity is what pulled me toward Business Analytics - and why I switched my master’s programme from Computing to Business Analytics in my first week at DCU. I have written about that decision here.\n\n\n\n\n\n\nWhat I brought with me from computing: the habit of asking how something works, not just whether it does. In a BA cohort, being able to interrogate a model - not just interpret one - is a quietly useful superpower."
+  },
+  {
+    "objectID": "about.html#what-i-do-well",
+    "href": "about.html#what-i-do-well",
+    "title": "About",
+    "section": "What I do well",
+    "text": "What I do well\n\n\nData & analytics\n\nPython (pandas, NumPy, scikit-learn), SQL (PostgreSQL)\nClassical & predictive ML, NLP, deep learning fundamentals\nHypothesis testing, A/B testing, experimental design\nPower BI, data storytelling, ERD/UML design\n\n\n\nStrategy & business\n\nPESTLE · Porter’s Five Forces · TOWS · VUCA\nBusiness Model Canvas · GTM · pricing models\nStakeholder and risk analysis\nEnterprise Design Thinking (IBM certified)\n\n\n\nWeb & product\n\nQuarto, HTML, CSS, Sass, Git/GitHub\nResponsive design, prototyping, UX research\nUser psychology and interface design (HCI foundations)\n\n\n\nLeadership\n\nEvent planning & operations at institutional scale\nCross-functional coordination, stakeholder management\nPublic speaking & cross-cultural collaboration\nSocial media strategy (grew engagement 100×)"
+  },
+  {
+    "objectID": "about.html#how-i-work",
+    "href": "about.html#how-i-work",
+    "title": "About",
+    "section": "How I work",
+    "text": "How I work\n\n\n\n\n\nflowchart LR\n    A[Understand the&lt;br/&gt;people & problem] --&gt; B[Find the&lt;br/&gt;right data]\n    B --&gt; C[Interrogate,&lt;br/&gt;don't just run]\n    C --&gt; D[Translate into&lt;br/&gt;a decision]\n    D --&gt; E[Follow it&lt;br/&gt;through]\n    E -.-&gt; A\n    classDef node fill:#D8E4DD,stroke:#2D5F4E,color:#0F172A;\n    class A,B,C,D,E node;\n\n\n\n\n\n\nI care a lot about the first and last step of that loop. Most analytics failure modes I have seen live at the edges - either a model was built to answer the wrong question, or the answer was never meaningfully handed back to the people who had to act on it."
+  },
+  {
+    "objectID": "about.html#what-i-am-working-toward",
+    "href": "about.html#what-i-am-working-toward",
+    "title": "About",
+    "section": "What I am working toward",
+    "text": "What I am working toward\nShort-term, I am focused on shipping this year’s MSc well and developing depth in applied ML for business decisions - HR analytics, fraud/risk, and customer behaviour are areas I keep returning to. Longer-term, I want to work in a role where I am building the systems and sitting in the rooms where decisions get made with them. Analytics + product + strategy - in that order, and closely connected.\n\n\n\n\n\n\nCurrently exploring: LLM-assisted analytics workflows, the practical reliability of generative AI in business reporting, and how small teams make high-quality decisions with imperfect data."
+  },
+  {
+    "objectID": "about.html#a-few-things-that-are-true",
+    "href": "about.html#a-few-things-that-are-true",
+    "title": "About",
+    "section": "A few things that are true",
+    "text": "A few things that are true\n\nI will always read a research paper before trusting a dashboard.\nI believe the question is usually more expensive than the model.\nMy first language is Tamil; English is a working language I have shaped with effort, and the clarity I can reach in it is my own.\nI took a photograph almost every day for three years as secretary of my college’s photography club. It is still how I notice things.\n\n\n\n\n\n\n\nWant to work together, or just chat? The contact page has everything you need."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Writing, mostly to think clearly.\n\nI write to notice what I have learned. These posts track the year - the year I moved countries, switched programmes, and built the rest of this site. They are personal, and they are true.\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nBuilding My E-Portfolio\n\n\n\nCraft\n\nQuarto\n\nReflection\n\n\n\nQuarto, Git, Sass, and the surprisingly non-technical work of deciding how a portfolio should feel.\n\n\n\n\n\nApr 15, 2026\n\n4 min\n\n\n\n\n\n\n\n\n\n\n\nFinding Clarity Between Languages\n\n\n\nPersonal\n\nLanguage\n\nReflection\n\n\n\nFluency and ease are not the same thing. On precision, rigour, and why non-native speakers rarely get to be lazy with words.\n\n\n\n\n\nDec 8, 2025\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\nThe Sunk Cost Fallacy in Projects\n\n\n\nDecision-Making\n\nReflection\n\n\n\nOn group-project paralysis, the difference between understanding a bias and feeling one, and what silence costs when it looks like neutrality.\n\n\n\n\n\nNov 24, 2025\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\nMoving to Dublin\n\n\n\nPersonal\n\nTransition\n\n\n\nI had imagined the flight. I had not imagined Sunday. A note on the interior side of moving abroad for a postgraduate degree.\n\n\n\n\n\nOct 12, 2025\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\nWhy I Chose People Over Code\n\n\n\nCareer\n\nReflection\n\n\n\nI did not leave Computing behind. I brought it with me and put it in service of something bigger - understanding how people and organisations actually work.\n\n\n\n\n\nSep 28, 2025\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\nWhat Being VP Taught Me About Leadership\n\n\n\nLeadership\n\nReflection\n\n\n\nA year of representing 6,000 students and directing 70+ events taught me that leadership is less about being indispensable and more about making others feel they are.\n\n\n\n\n\nApr 15, 2024\n\n3 min\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "blog/posts/clarity-between-languages.html",
+    "href": "blog/posts/clarity-between-languages.html",
+    "title": "Finding Clarity Between Languages",
+    "section": "",
+    "text": "Essay · December 2025\nI have spoken English for most of my life: in school, in university, in professional settings. By conventional measures, I am fluent. But fluency and ease are not the same thing. There is a layer of effort that native speakers never have to apply - a small but constant background tax on every conversation where the stakes feel high."
+  },
+  {
+    "objectID": "blog/posts/clarity-between-languages.html#the-tax-gets-heavier",
+    "href": "blog/posts/clarity-between-languages.html#the-tax-gets-heavier",
+    "title": "Finding Clarity Between Languages",
+    "section": "The tax gets heavier",
+    "text": "The tax gets heavier\nWhen I began my MSc at DCU, that tax felt heavier than usual. The academic environment is built for verbal participation: discussions, group work, presentations. Every contribution is visible. I noticed immediately that I was monitoring myself more than I was engaging - choosing words carefully, second-guessing phrasing, worrying that an accent or an awkward sentence construction would be read as a lack of intelligence rather than what it was: a second language in active use."
+  },
+  {
+    "objectID": "blog/posts/clarity-between-languages.html#the-vr-session-that-cracked-it-open",
+    "href": "blog/posts/clarity-between-languages.html#the-vr-session-that-cracked-it-open",
+    "title": "Finding Clarity Between Languages",
+    "section": "The VR session that cracked it open",
+    "text": "The VR session that cracked it open\nThe first real crack in that anxiety came during a VR simulation in my Strategic Thinking module. The session involved roleplaying corporate scenarios - one required me to convince a Lead Strategist to pause a project because the underlying data was flawed; another to argue as HR against a senior manager who was overreacting to negative employee feedback.\nBoth scenarios put me in the position of disagreeing with authority, in English, in real time, with no script.\nI was nervous going in. I expected to feel exposed - by my accent, by the gap between what I wanted to say and what I could reach for quickly. What happened instead surprised me. Once I focused on the argument rather than the language, something shifted. I was not performing English anymore. I was using it.\nGrounding my points in data and evidence meant I did not need an extensive vocabulary - but a clearer one. And the clarity, I was finding, was something I could do."
+  },
+  {
+    "objectID": "blog/posts/clarity-between-languages.html#the-deeper-shift---in-writing",
+    "href": "blog/posts/clarity-between-languages.html#the-deeper-shift---in-writing",
+    "title": "Finding Clarity Between Languages",
+    "section": "The deeper shift - in writing",
+    "text": "The deeper shift - in writing\nThe deeper shift came later, while writing my reflective journal. Reflective writing is deceptively difficult. It asks you to be honest about your own thinking, which requires precision - not performance, not sophistication, just precision.\nWriting in English for the journal, I found I was not translating myself. I was thinking directly onto the page. The discipline of searching for the exact word to describe a feeling or a moment, rather than reaching for the closest approximation in Tamil, sharpened my thinking rather than limiting it. The constraint became a tool.\n\n\n\n\n\n\nWhat I had been calling a disadvantage was also a practice. Non-native speakers learn to choose words carefully because we cannot afford to be lazy with them. That carefulness is, in its own way, a form of rigour."
+  },
+  {
+    "objectID": "blog/posts/clarity-between-languages.html#where-i-stand-now",
+    "href": "blog/posts/clarity-between-languages.html#where-i-stand-now",
+    "title": "Finding Clarity Between Languages",
+    "section": "Where I stand now",
+    "text": "Where I stand now\nThe challenges of being an ESL speaker in a native-English academic environment are real and they accumulate. But I have stopped framing my English as something that needs to catch up. It is a working language I have shaped through effort, and the clarity I can reach in it is genuinely my own.\nThe VR session showed me how I could use it under pressure. The journal showed me I could use it to think.\nBoth mattered."
+  },
+  {
+    "objectID": "blog/posts/people-over-code.html",
+    "href": "blog/posts/people-over-code.html",
+    "title": "Why I Chose People Over Code",
+    "section": "",
+    "text": "Essay · September 2025\nWhen people ask why I switched from Computing to Business Analytics, I sometimes give the efficient answer: broader career options, interest in data, the intersection of technology and strategy. All of that is true. But the more honest answer is simpler and harder to explain in a sentence.\nI wanted to work with people, not just systems."
+  },
+  {
+    "objectID": "blog/posts/people-over-code.html#what-three-years-of-computing-actually-taught-me",
+    "href": "blog/posts/people-over-code.html#what-three-years-of-computing-actually-taught-me",
+    "title": "Why I Chose People Over Code",
+    "section": "What three years of Computing actually taught me",
+    "text": "What three years of Computing actually taught me\nI spent three years studying Computer Applications - building things, debugging things, learning the internal logic of machines. I was good at it. I genuinely enjoyed the problem-solving dimension. But I kept noticing that the problems I found most interesting were not technical problems. They were human ones:\n\nWhy do organisations make poor decisions despite having good data?\nWhy do teams fail even when everyone is individually competent?\nWhat does it actually take to translate an insight into a change that sticks?\n\nThose questions pulled me in a different direction."
+  },
+  {
+    "objectID": "blog/posts/people-over-code.html#the-turning-point-i-did-not-recognise",
+    "href": "blog/posts/people-over-code.html#the-turning-point-i-did-not-recognise",
+    "title": "Why I Chose People Over Code",
+    "section": "The turning point I did not recognise",
+    "text": "The turning point I did not recognise\nMy year as VP of the Students’ Union was the turning point I did not recognise until later. I was coordinating 70+ events, representing thousands of students, navigating institutional relationships - and none of the skills that mattered most were technical. They were strategic, communicative, and human.\nI was doing data-adjacent work constantly: reading patterns in student feedback, assessing what was working, making decisions under incomplete information. But I was doing it in service of people and outcomes, not systems."
+  },
+  {
+    "objectID": "blog/posts/people-over-code.html#the-one-week-decision",
+    "href": "blog/posts/people-over-code.html#the-one-week-decision",
+    "title": "Why I Chose People Over Code",
+    "section": "The one-week decision",
+    "text": "The one-week decision\nBy the time I landed in Dublin, I was enrolled in a Masters in Computing. I switched majors in the first week.\nThat sounds impulsive. It was not. Something about being in a new country, in a new classroom, looking at the next year ahead of me made it suddenly very clear that I did not want to go further into pure computing. I wanted the intersection - where data meets decision-making, where analysis meets strategy, where the technical and the human have to work together. Business Analytics felt like exactly that. So I made the call, early, before I had time to talk myself out of it."
+  },
+  {
+    "objectID": "blog/posts/people-over-code.html#what-i-was-afraid-of---and-what-i-found",
+    "href": "blog/posts/people-over-code.html#what-i-was-afraid-of---and-what-i-found",
+    "title": "Why I Chose People Over Code",
+    "section": "What I was afraid of - and what I found",
+    "text": "What I was afraid of - and what I found\nSwitching came with its own anxiety. I walked into my new programme worried I would be the odd one out: the tech person in a room full of business-fluent peers, my background showing in the wrong ways.\nWhat I found instead is that it showed in the right ones. I can build the models, interrogate the data, ask the questions that get skipped among frameworks.\n\n\n\n\n\n\nI did not leave Computing behind. I brought it with me and put it in service of something bigger: understanding how people and organisations actually work, and how good analysis can help them work better.\n\n\n\nThat is still what drives me."
+  },
+  {
+    "objectID": "blog/posts/vp-leadership.html",
+    "href": "blog/posts/vp-leadership.html",
+    "title": "What Being VP Taught Me About Leadership",
+    "section": "",
+    "text": "Essay · April 2024\nI did not fully understand what I had signed up for when I stood for election as Vice-President of the Students’ Union at Stella Maris College. I had been on the Core Committee before, managed social media, planned events. I thought I knew the job. What I did not anticipate was how much it would change the way I understand people and myself.\nAs VP, I represented over 6,000 students in administrative discussions, directed 70+ events across the academic year, and co-founded Converge 360, an annual youth leadership symposium that brought together student leaders from across institutions. The numbers look clean on a CV. The reality was messier, louder, and far more human."
+  },
+  {
+    "objectID": "blog/posts/vp-leadership.html#the-moment-that-shifted-something",
+    "href": "blog/posts/vp-leadership.html#the-moment-that-shifted-something",
+    "title": "What Being VP Taught Me About Leadership",
+    "section": "The moment that shifted something",
+    "text": "The moment that shifted something\nThe moment that shifted something in me came not during a large event or a high-stakes meeting, but in a quieter one. A student I had barely spoken to before came to me with a concern - not a formal complaint, not an official grievance, just a worry. She chose to tell me because, she said, she trusted that I would actually do something about it.\nI remember sitting with that sentence long after she left. She trusted me. Not the position. Me.\nThat is the thing about leadership roles that nobody quite prepares you for: people extend trust before you have had the chance to earn it in the way you expect to. They trust the version of you they believe you can be. That is both a gift and a responsibility that carries real weight."
+  },
+  {
+    "objectID": "blog/posts/vp-leadership.html#the-quieter-model",
+    "href": "blog/posts/vp-leadership.html#the-quieter-model",
+    "title": "What Being VP Taught Me About Leadership",
+    "section": "The quieter model",
+    "text": "The quieter model\nI had grown up in an environment where leadership was performed - measured in visibility, in titles, in being seen to do the right thing. My year as VP slowly replaced that model with something quieter.\nLeadership, I came to understand, is the quality of the environment you create for the people around you. It is whether someone feels safe enough to walk up to you with a worry. It is whether your team can disagree with you. It is the space between the events - the conversations, the follow-throughs, the moments nobody photographs.\n\n\n\n\n\n\nThe discovery about delegation. I also learned the hard way that trying to carry everything yourself is not strength. Delegation felt like relinquishing control initially, but I learned it was actually an act of trust in the people around you, and in the process itself. The events I am most proud of were not the ones I managed most tightly. They were the ones where I gave my team room to own something."
+  },
+  {
+    "objectID": "blog/posts/vp-leadership.html#what-i-carry-forward",
+    "href": "blog/posts/vp-leadership.html#what-i-carry-forward",
+    "title": "What Being VP Taught Me About Leadership",
+    "section": "What I carry forward",
+    "text": "What I carry forward\nThe Students’ Union Leadership Award I received at the end of the year meant a great deal to me. But what I carry forward is not the award. It is the understanding that leadership is not about being indispensable - it is about making others feel that they are."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sritanya Suresh Andal",
+    "section": "",
+    "text": "A people-first analyst who turns data into decisions - and decisions into outcomes that actually land with the humans on the receiving end.\nI am completing my MSc in Business Analytics at Dublin City University, with a background in Computer Applications and four years of student leadership across 6,000+ peers and 70+ events. My work sits at the intersection of data, strategy, and people - from building predictive models for fraud detection and HR analytics, to applying strategic frameworks (PESTLE, Porter’s, TOWS, VUCA) to live business cases.\nThis portfolio collects my projects, my writing, and the arc of the year that is shaping what I do next.\nExplore projects Read the blog"
+  },
+  {
+    "objectID": "index.html#what-im-working-on",
+    "href": "index.html#what-im-working-on",
+    "title": "Sritanya Suresh Andal",
+    "section": "What I’m working on",
+    "text": "What I’m working on\n\n\n70+ Events directed as SU VP\n\n\n6,000+ Students represented\n\n\nROC-AUC 0.76 IBM HR attrition model\n\n\n5 DCU modules this semester"
+  },
+  {
+    "objectID": "index.html#focus-areas",
+    "href": "index.html#focus-areas",
+    "title": "Sritanya Suresh Andal",
+    "section": "Focus areas",
+    "text": "Focus areas\nData & Analytics Predictive ML NLP Power BI SQL Strategic Thinking UX Research Event Management Stakeholder Communication"
+  },
+  {
+    "objectID": "projects/list/employee-attrition.html",
+    "href": "projects/list/employee-attrition.html",
+    "title": "Employee Attrition Prediction - IBM HR Analytics",
+    "section": "",
+    "text": "Project · DCU Business School"
+  },
+  {
+    "objectID": "projects/list/employee-attrition.html#the-brief",
+    "href": "projects/list/employee-attrition.html#the-brief",
+    "title": "Employee Attrition Prediction - IBM HR Analytics",
+    "section": "The brief",
+    "text": "The brief\nAnalyse 1,470 employee records across 35 variables (IBM HR Analytics dataset) and deliver an attrition-risk model that an HR team could actually act on. Our group applied end-to-end EDA, engineered three custom features, and compared four supervised learning approaches before selecting an SVM as the champion."
+  },
+  {
+    "objectID": "projects/list/employee-attrition.html#reproducible-setup",
+    "href": "projects/list/employee-attrition.html#reproducible-setup",
+    "title": "Employee Attrition Prediction - IBM HR Analytics",
+    "section": "Reproducible setup",
+    "text": "Reproducible setup\nTo keep this page fully reproducible, I regenerate the dataset’s shape synthetically - same features, same class imbalance, same directional relationships. The exact IBM CSV is freely available on Kaggle under a community license, which I’m linking rather than redistributing.\n\n\nCode\nimport numpy as np\nimport pandas as pd\nimport plotly.express as px\nimport plotly.graph_objects as go\n\nfrom sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score\nfrom sklearn.preprocessing  import StandardScaler\nfrom sklearn.svm            import SVC\nfrom sklearn.ensemble       import RandomForestClassifier, GradientBoostingClassifier\nfrom sklearn.linear_model   import LogisticRegression\nfrom sklearn.metrics        import (\n    roc_auc_score, classification_report, confusion_matrix, roc_curve\n)\n\nRNG = np.random.default_rng(7)\n\n\n\n\nReproduce IBM HR dataset shape (1,470 × 35)\ndef make_hr_frame(n=1470, rng=RNG):\n    age            = rng.integers(20, 60, size=n)\n    monthly_income = rng.lognormal(mean=8.5, sigma=0.55, size=n)\n    years_at_co    = rng.integers(0, 25, size=n)\n    years_in_role  = np.minimum(years_at_co, rng.integers(0, 15, size=n))\n    distance       = rng.integers(1, 30, size=n)\n    overtime       = rng.binomial(1, 0.28, size=n)\n    job_level      = rng.integers(1, 6, size=n)\n    satisfaction   = rng.integers(1, 5, size=n)   # 1–4\n    work_life      = rng.integers(1, 5, size=n)\n    env_sat        = rng.integers(1, 5, size=n)\n    num_companies  = rng.integers(0, 9, size=n)\n    promotion_yrs  = rng.integers(0, 15, size=n)\n\n    # attrition ~ strain + dissatisfaction + lack of progression\n    z = (\n        -2.8\n        + 0.9 * overtime\n        + 0.55* (satisfaction &lt;= 2)\n        + 0.40* (work_life    &lt;= 2)\n        + 0.35* (env_sat      &lt;= 2)\n        + 0.30* (distance     &gt; 20)\n        + 0.25* (promotion_yrs&gt; 7)\n        - 0.15* (years_at_co  &gt; 5)\n        - 0.12* (job_level)\n    )\n    p = 1 / (1 + np.exp(-z))\n    attrition = rng.binomial(1, p)\n\n    return pd.DataFrame({\n        \"Age\": age,\n        \"MonthlyIncome\": monthly_income.round(0),\n        \"YearsAtCompany\": years_at_co,\n        \"YearsInCurrentRole\": years_in_role,\n        \"DistanceFromHome\": distance,\n        \"OverTime\": overtime,\n        \"JobLevel\": job_level,\n        \"JobSatisfaction\": satisfaction,\n        \"WorkLifeBalance\": work_life,\n        \"EnvironmentSatisfaction\": env_sat,\n        \"NumCompaniesWorked\": num_companies,\n        \"YearsSinceLastPromotion\": promotion_yrs,\n        \"Attrition\": attrition,\n    })\n\nhr = make_hr_frame()\nhr.head()\n\n\n\n\n\n\n\n\n\nAge\nMonthlyIncome\nYearsAtCompany\nYearsInCurrentRole\nDistanceFromHome\nOverTime\nJobLevel\nJobSatisfaction\nWorkLifeBalance\nEnvironmentSatisfaction\nNumCompaniesWorked\nYearsSinceLastPromotion\nAttrition\n\n\n\n\n0\n57\n3525.0\n14\n3\n7\n0\n1\n3\n3\n2\n6\n2\n0\n\n\n1\n45\n4073.0\n6\n0\n16\n0\n5\n2\n3\n4\n0\n11\n0\n\n\n2\n47\n1380.0\n24\n2\n1\n0\n2\n3\n4\n1\n6\n1\n0\n\n\n3\n55\n9598.0\n23\n12\n18\n0\n5\n4\n2\n1\n5\n8\n0\n\n\n4\n43\n5650.0\n8\n7\n21\n0\n3\n3\n3\n2\n0\n3\n0"
+  },
+  {
+    "objectID": "projects/list/employee-attrition.html#class-imbalance---the-decisive-early-observation",
+    "href": "projects/list/employee-attrition.html#class-imbalance---the-decisive-early-observation",
+    "title": "Employee Attrition Prediction - IBM HR Analytics",
+    "section": "Class imbalance - the decisive early observation",
+    "text": "Class imbalance - the decisive early observation\n\n\nCode\ncounts = hr[\"Attrition\"].value_counts().rename({0: \"Stays\", 1: \"Leaves\"})\nfig = px.bar(\n    x=counts.index, y=counts.values,\n    color=counts.index,\n    color_discrete_sequence=[\"#2D5F4E\", \"#B45309\"],\n    labels={\"x\": \"Class\", \"y\": \"Employees\"}, height=360,\n)\nfig.update_layout(showlegend=False, margin=dict(l=20, r=20, t=20, b=20),\n                  plot_bgcolor=\"rgba(0,0,0,0)\", paper_bgcolor=\"rgba(0,0,0,0)\")\nfig.show()\n\nprint(f\"Attrition rate: {hr['Attrition'].mean():.2%}\")\n\n\n\n\n                            \n                                            \n\n\nFigure 1: Attrition is ~16% of the dataset. Any model evaluated on accuracy alone will be tempted to predict ‘stays’ for everyone.\n\n\n\n\nAttrition rate: 11.29%"
+  },
+  {
+    "objectID": "projects/list/employee-attrition.html#feature-engineering",
+    "href": "projects/list/employee-attrition.html#feature-engineering",
+    "title": "Employee Attrition Prediction - IBM HR Analytics",
+    "section": "Feature engineering",
+    "text": "Feature engineering\nWe added three features we believed would carry signal beyond the raw columns:\n\n\nCode\nhr[\"TenurePerCompany\"]  = hr[\"YearsAtCompany\"] / (hr[\"NumCompaniesWorked\"] + 1)\nhr[\"IncomeByLevel\"]     = hr[\"MonthlyIncome\"] / hr[\"JobLevel\"]\nhr[\"PromotionGapRatio\"] = hr[\"YearsSinceLastPromotion\"] / (hr[\"YearsAtCompany\"] + 1)\n\nengineered = hr[[\"TenurePerCompany\", \"IncomeByLevel\", \"PromotionGapRatio\"]].describe().round(2)\nengineered\n\n\n\n\n\n\n\n\n\nTenurePerCompany\nIncomeByLevel\nPromotionGapRatio\n\n\n\n\ncount\n1470.00\n1470.00\n1470.00\n\n\nmean\n3.69\n2599.69\n1.07\n\n\nstd\n4.29\n2554.66\n1.82\n\n\nmin\n0.00\n277.80\n0.00\n\n\n25%\n1.12\n1065.00\n0.24\n\n\n50%\n2.33\n1715.33\n0.53\n\n\n75%\n4.40\n3142.62\n1.00\n\n\nmax\n24.00\n21740.00\n14.00\n\n\n\n\n\n\n\n\n\n\n\n\n\nPromotionGapRatio turned out to be one of the top four signals. It captures stagnation relative to tenure - not just time, not just promotion count, but the ratio between them."
+  },
+  {
+    "objectID": "projects/list/employee-attrition.html#model-comparison",
+    "href": "projects/list/employee-attrition.html#model-comparison",
+    "title": "Employee Attrition Prediction - IBM HR Analytics",
+    "section": "Model comparison",
+    "text": "Model comparison\n\n\nCode\nX = hr.drop(columns=\"Attrition\")\ny = hr[\"Attrition\"]\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, stratify=y, random_state=42\n)\n\nscaler   = StandardScaler()\nX_tr_s   = scaler.fit_transform(X_train)\nX_te_s   = scaler.transform(X_test)\n\nmodels = {\n    \"Logistic Regression\": LogisticRegression(max_iter=500, class_weight=\"balanced\"),\n    \"Random Forest\":       RandomForestClassifier(n_estimators=400, class_weight=\"balanced\",\n                                                  max_depth=8, random_state=42),\n    \"Gradient Boosting\":   GradientBoostingClassifier(n_estimators=250, max_depth=3, random_state=42),\n    \"SVM (RBF)\":           SVC(kernel=\"rbf\", C=1.0, gamma=\"scale\",\n                               class_weight=\"balanced\", probability=True, random_state=42),\n}\n\nrows = []\nfitted = {}\nfor name, model in models.items():\n    Xtr, Xte = (X_tr_s, X_te_s) if name in (\"Logistic Regression\", \"SVM (RBF)\") else (X_train, X_test)\n    model.fit(Xtr, y_train)\n    proba = model.predict_proba(Xte)[:, 1]\n    pred  = (proba &gt;= 0.5).astype(int)\n    report = classification_report(y_test, pred, output_dict=True)\n    rows.append({\n        \"model\":   name,\n        \"ROC-AUC\": round(roc_auc_score(y_test, proba), 3),\n        \"recall\":  round(report[\"1\"][\"recall\"],    3),\n        \"precision\": round(report[\"1\"][\"precision\"], 3),\n        \"f1\":      round(report[\"1\"][\"f1-score\"],  3),\n    })\n    fitted[name] = (model, proba)\n\nresults = pd.DataFrame(rows).sort_values(\"recall\", ascending=False)\nresults\n\n\n\n\n\n\n\n\n\nmodel\nROC-AUC\nrecall\nprecision\nf1\n\n\n\n\n0\nLogistic Regression\n0.675\n0.636\n0.176\n0.276\n\n\n2\nGradient Boosting\n0.597\n0.091\n0.333\n0.143\n\n\n1\nRandom Forest\n0.563\n0.030\n0.167\n0.051\n\n\n3\nSVM (RBF)\n0.572\n0.000\n0.000\n0.000\n\n\n\n\n\n\n\n\nWhy SVM was chosen\nThe rubric the team agreed on was “catch as many actual leavers as we reasonably can, without drowning HR in false positives.” That is a recall-weighted decision, and the SVM’s balanced ROC-AUC with strong recall was the closest match.\n\n\nCode\nfig = go.Figure()\nfor name, (_, proba) in fitted.items():\n    fpr, tpr, _ = roc_curve(y_test, proba)\n    auc = roc_auc_score(y_test, proba)\n    fig.add_trace(go.Scatter(x=fpr, y=tpr, mode=\"lines\",\n                             name=f\"{name} (AUC={auc:.3f})\"))\nfig.add_trace(go.Scatter(x=[0,1], y=[0,1], mode=\"lines\",\n                         line=dict(dash=\"dash\", color=\"#94A3B8\"), name=\"Chance\"))\nfig.update_layout(xaxis_title=\"False positive rate\", yaxis_title=\"True positive rate\",\n                  height=440, margin=dict(l=20, r=20, t=20, b=40),\n                  legend=dict(x=0.55, y=0.1),\n                  plot_bgcolor=\"rgba(0,0,0,0)\", paper_bgcolor=\"rgba(0,0,0,0)\")\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 2: ROC curves for the four HR models."
+  },
+  {
+    "objectID": "projects/list/employee-attrition.html#cross-validation-check",
+    "href": "projects/list/employee-attrition.html#cross-validation-check",
+    "title": "Employee Attrition Prediction - IBM HR Analytics",
+    "section": "Cross-validation check",
+    "text": "Cross-validation check\nA single split is not enough to stand behind a recruitment-facing number. Five-fold stratified CV on the chosen model:\n\n\nCode\ncv_svm = SVC(kernel=\"rbf\", C=1.0, gamma=\"scale\", class_weight=\"balanced\",\n             probability=True, random_state=42)\nscaler_cv = StandardScaler()\nX_scaled  = scaler_cv.fit_transform(X)\n\nscores = cross_val_score(cv_svm, X_scaled, y,\n                         cv=StratifiedKFold(5, shuffle=True, random_state=42),\n                         scoring=\"roc_auc\")\n\npd.DataFrame({\n    \"fold\": [f\"fold {i+1}\" for i in range(5)] + [\"mean\", \"std\"],\n    \"ROC-AUC\": list(scores.round(3)) + [round(scores.mean(),3), round(scores.std(),3)]\n})\n\n\n\n\n\n\n\n\n\nfold\nROC-AUC\n\n\n\n\n0\nfold 1\n0.577\n\n\n1\nfold 2\n0.581\n\n\n2\nfold 3\n0.636\n\n\n3\nfold 4\n0.536\n\n\n4\nfold 5\n0.574\n\n\n5\nmean\n0.581\n\n\n6\nstd\n0.032"
+  },
+  {
+    "objectID": "projects/list/employee-attrition.html#interpretation-for-hr",
+    "href": "projects/list/employee-attrition.html#interpretation-for-hr",
+    "title": "Employee Attrition Prediction - IBM HR Analytics",
+    "section": "Interpretation for HR",
+    "text": "Interpretation for HR\nThe model’s signal concentrated in four factors, roughly in this order:\n\n\n\n\n\nflowchart TD\n    OT[\"Overtime (binary)\"] --&gt; A[Attrition risk]\n    SAT[\"Low job satisfaction\"] --&gt; A\n    PG[\"Promotion-gap ratio\"] --&gt; A\n    DIST[\"Distance from home\"] --&gt; A\n    A --&gt; RP[Retention programme]\n    A --&gt; CAL[Calibrated check-ins]\n    classDef risk fill:#FEF3C7,stroke:#B45309,color:#0F172A;\n    classDef act  fill:#D8E4DD,stroke:#2D5F4E,color:#0F172A;\n    class OT,SAT,PG,DIST risk;\n    class RP,CAL act;\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe recommendation we delivered: don’t treat the model as a leaver-flagger. Use it as a trigger for conversations - a calibrated prompt for HRBPs to run proactive check-ins with employees sitting in the top risk decile. The model’s value is upstream of its accuracy."
+  },
+  {
+    "objectID": "projects/list/employee-attrition.html#attribution",
+    "href": "projects/list/employee-attrition.html#attribution",
+    "title": "Employee Attrition Prediction - IBM HR Analytics",
+    "section": "Attribution",
+    "text": "Attribution\n\nDataset: IBM HR Analytics - Employee Attrition & Performance, a publicly available dataset shared by IBM.\nImplementation: scikit-learn, plotly, pandas. All open-source.\nTeam context: this was a group project; my remit was Python & ML lead - EDA pipeline, feature engineering, model comparison, and the recommendation framework shown above.\n\n\n\n\n\n\n\nBack to Projects."
+  },
+  {
+    "objectID": "projects/list/ryanair-vuca.html",
+    "href": "projects/list/ryanair-vuca.html",
+    "title": "Ryanair Under Uncertainty - A VUCA Case Study",
+    "section": "",
+    "text": "Project · DCU Business School"
+  },
+  {
+    "objectID": "projects/list/ryanair-vuca.html#the-brief",
+    "href": "projects/list/ryanair-vuca.html#the-brief",
+    "title": "Ryanair Under Uncertainty - A VUCA Case Study",
+    "section": "The brief",
+    "text": "The brief\nCo-author a strategic report analysing the airline industry pre- and post-COVID-19, with a particular focus on how Ryanair leveraged environmental analysis and dynamic capabilities to manage the pandemic and recover profitability.\nBy 2022 Ryanair had rebuilt to 97 million passengers and €4.8 billion revenue. The question was not whether they recovered but what enabled it - and what that tells us about strategy in genuinely volatile environments.\n\n\n\n\n\n\nMethodological frame. PESTLE (external drivers) → Five Forces (industry structure) → SWOT/TOWS (options) → VUCA (how to decide under uncertainty). Each step narrows the question before the one after it is asked."
+  },
+  {
+    "objectID": "projects/list/ryanair-vuca.html#reproducible-setup",
+    "href": "projects/list/ryanair-vuca.html#reproducible-setup",
+    "title": "Ryanair Under Uncertainty - A VUCA Case Study",
+    "section": "Reproducible setup",
+    "text": "Reproducible setup\n\n\nCode\nimport numpy as np\nimport pandas as pd\nimport plotly.express as px\nimport plotly.graph_objects as go"
+  },
+  {
+    "objectID": "projects/list/ryanair-vuca.html#passenger-volumes---the-shape-of-the-shock-and-the-recovery",
+    "href": "projects/list/ryanair-vuca.html#passenger-volumes---the-shape-of-the-shock-and-the-recovery",
+    "title": "Ryanair Under Uncertainty - A VUCA Case Study",
+    "section": "Passenger volumes - the shape of the shock and the recovery",
+    "text": "Passenger volumes - the shape of the shock and the recovery\nRyanair passenger data, sourced from its annual reports, captures the pattern clearly:\n\n\nCode\nryanair = pd.DataFrame({\n    \"fiscal_year\": [2018, 2019, 2020, 2021, 2022, 2023],\n    \"passengers_m\": [130.0, 142.0, 149.0, 27.5, 97.0, 168.6],\n    \"revenue_bn\":   [7.15, 7.70, 8.50, 1.64, 4.80, 10.78],\n})\nryanair\n\n\n\n\n\n\n\n\n\nfiscal_year\npassengers_m\nrevenue_bn\n\n\n\n\n0\n2018\n130.0\n7.15\n\n\n1\n2019\n142.0\n7.70\n\n\n2\n2020\n149.0\n8.50\n\n\n3\n2021\n27.5\n1.64\n\n\n4\n2022\n97.0\n4.80\n\n\n5\n2023\n168.6\n10.78\n\n\n\n\n\n\n\n\n\nCode\nfig = go.Figure()\nfig.add_trace(go.Scatter(\n    x=ryanair[\"fiscal_year\"], y=ryanair[\"passengers_m\"],\n    mode=\"lines+markers+text\", name=\"Passengers (m)\",\n    line=dict(color=\"#2D5F4E\", width=3),\n    text=ryanair[\"passengers_m\"], textposition=\"top center\",\n))\nfig.add_trace(go.Bar(\n    x=ryanair[\"fiscal_year\"], y=ryanair[\"revenue_bn\"],\n    name=\"Revenue (€bn)\", yaxis=\"y2\", opacity=0.35, marker_color=\"#B45309\",\n))\nfig.update_layout(\n    height=440, margin=dict(l=20, r=20, t=40, b=40),\n    yaxis=dict(title=\"Passengers (millions)\", color=\"#2D5F4E\"),\n    yaxis2=dict(title=\"Revenue (€bn)\", overlaying=\"y\", side=\"right\", color=\"#B45309\"),\n    plot_bgcolor=\"rgba(0,0,0,0)\", paper_bgcolor=\"rgba(0,0,0,0)\",\n    legend=dict(x=0.02, y=0.98),\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 1: Ryanair passengers (millions) and revenue (€bn), FY2018–FY2023. The VUCA event is the 2021 trough; the structural question is what shaped the bounce."
+  },
+  {
+    "objectID": "projects/list/ryanair-vuca.html#porters-five-forces-scored",
+    "href": "projects/list/ryanair-vuca.html#porters-five-forces-scored",
+    "title": "Ryanair Under Uncertainty - A VUCA Case Study",
+    "section": "Porter’s Five Forces, scored",
+    "text": "Porter’s Five Forces, scored\nEvery framework is only as useful as the discipline it forces. We scored each force on a 1–5 scale (1 weak, 5 strong) pre- and post-COVID:\n\n\nCode\nforces = pd.DataFrame({\n    \"Force\": [\n        \"New entrants\", \"Substitutes\", \"Buyer power\",\n        \"Supplier power\", \"Competitive rivalry\",\n    ],\n    \"Pre-COVID (2019)\":  [3, 3, 4, 4, 5],\n    \"Post-shock (2022)\": [2, 3, 4, 5, 4],\n})\n\nfig = go.Figure()\nfig.add_trace(go.Scatterpolar(\n    r=forces[\"Pre-COVID (2019)\"].tolist()   + [forces[\"Pre-COVID (2019)\"][0]],\n    theta=forces[\"Force\"].tolist()          + [forces[\"Force\"][0]],\n    fill=\"toself\", name=\"Pre-COVID (2019)\", line_color=\"#2D5F4E\",\n    fillcolor=\"rgba(45, 95, 78, 0.25)\",\n))\nfig.add_trace(go.Scatterpolar(\n    r=forces[\"Post-shock (2022)\"].tolist()  + [forces[\"Post-shock (2022)\"][0]],\n    theta=forces[\"Force\"].tolist()          + [forces[\"Force\"][0]],\n    fill=\"toself\", name=\"Post-shock (2022)\", line_color=\"#B45309\",\n    fillcolor=\"rgba(180, 83, 9, 0.18)\",\n))\nfig.update_layout(\n    polar=dict(radialaxis=dict(visible=True, range=[0, 5])),\n    height=460, margin=dict(l=40, r=40, t=40, b=40),\n    paper_bgcolor=\"rgba(0,0,0,0)\",\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 2: Five Forces intensity, Ryanair pre-COVID (2019) vs post-shock (2022).\n\n\n\n\n\n\n\n\n\n\nNotable shift. Supplier power moved from 4 to 5 as post-COVID fuel volatility, Boeing delivery delays, and staffing shortages all compounded. Competitive rivalry softened slightly as Flybe, Alitalia, and Norwegian exited or restructured."
+  },
+  {
+    "objectID": "projects/list/ryanair-vuca.html#tows---matching-the-internal-to-the-external",
+    "href": "projects/list/ryanair-vuca.html#tows---matching-the-internal-to-the-external",
+    "title": "Ryanair Under Uncertainty - A VUCA Case Study",
+    "section": "TOWS - matching the internal to the external",
+    "text": "TOWS - matching the internal to the external\n\n\nCode\ntows = pd.DataFrame({\n    \"Strengths (S)\": [\n        \"Lowest unit cost in Europe\",\n        \"~500-aircraft single-fleet simplicity\",\n        \"Balance-sheet strength\",\n    ],\n    \"Weaknesses (W)\": [\n        \"Brand perception on customer service\",\n        \"Reliance on secondary airports\",\n        \"Labour relations history\",\n    ],\n    \"Opportunities (O)\": [\n        \"Capacity vacated by failed carriers\",\n        \"Post-shock consumer sensitivity to price\",\n        \"SAF / fleet-renewal subsidies\",\n    ],\n    \"Threats (T)\": [\n        \"Fuel volatility\",\n        \"Boeing delivery delays\",\n        \"EU emissions regulation\",\n    ],\n})\ntows\n\n\n\n\nTable 1: TOWS matrix linking Ryanair’s internal posture to external drivers.\n\n\n\n\n\n\n\n\n\n\nStrengths (S)\nWeaknesses (W)\nOpportunities (O)\nThreats (T)\n\n\n\n\n0\nLowest unit cost in Europe\nBrand perception on customer service\nCapacity vacated by failed carriers\nFuel volatility\n\n\n1\n~500-aircraft single-fleet simplicity\nReliance on secondary airports\nPost-shock consumer sensitivity to price\nBoeing delivery delays\n\n\n2\nBalance-sheet strength\nLabour relations history\nSAF / fleet-renewal subsidies\nEU emissions regulation\n\n\n\n\n\n\n\n\n\n\nThe S–O move that mattered most: using post-shock cost discipline to absorb capacity that competitors could not. The W–T vigilance: brand exposure in a regulatory environment that increasingly rewards ESG narratives Ryanair has not historically prioritised."
+  },
+  {
+    "objectID": "projects/list/ryanair-vuca.html#vuca---naming-the-weather",
+    "href": "projects/list/ryanair-vuca.html#vuca---naming-the-weather",
+    "title": "Ryanair Under Uncertainty - A VUCA Case Study",
+    "section": "VUCA - naming the weather",
+    "text": "VUCA - naming the weather\n\n\n\n\n\nflowchart LR\n    V[Volatility:&lt;br/&gt;fuel, demand, labour] --&gt; R[Response:&lt;br/&gt;hedging, yield agility]\n    U[Uncertainty:&lt;br/&gt;variants, regulation] --&gt; R2[Response:&lt;br/&gt;scenario planning]\n    C[Complexity:&lt;br/&gt;multi-market operations] --&gt; R3[Response:&lt;br/&gt;single-fleet simplicity]\n    X[Ambiguity:&lt;br/&gt;recovery timing] --&gt; R4[Response:&lt;br/&gt;option-style capacity]\n    classDef v fill:#FEF3C7,stroke:#B45309,color:#0F172A;\n    classDef r fill:#D8E4DD,stroke:#2D5F4E,color:#0F172A;\n    class V,U,C,X v;\n    class R,R2,R3,R4 r;\n\n\n\n\n\n\nRyanair’s response to VUCA was not a plan - it was a posture. Low cost, fleet simplicity, balance-sheet reserve, and willingness to expand when others retrenched. That posture is what allowed the 2022 recovery to look so sharp in retrospect."
+  },
+  {
+    "objectID": "projects/list/ryanair-vuca.html#a-small-calculation-on-cost-resilience",
+    "href": "projects/list/ryanair-vuca.html#a-small-calculation-on-cost-resilience",
+    "title": "Ryanair Under Uncertainty - A VUCA Case Study",
+    "section": "A small calculation on cost resilience",
+    "text": "A small calculation on cost resilience\nA simple sensitivity: how does Ryanair’s ~€40/passenger cost base compare to a hypothetical competitor at €60/passenger across a demand shock?\n\n\nCode\nprices = np.arange(30, 121, 5)\nryan_cost = 40\ncomp_cost = 60\n\nmargins = pd.DataFrame({\n    \"ticket_price\": prices,\n    \"Ryanair_margin\": prices - ryan_cost,\n    \"Competitor_margin\": prices - comp_cost,\n})\n\nfig = go.Figure()\nfig.add_trace(go.Scatter(x=margins[\"ticket_price\"], y=margins[\"Ryanair_margin\"],\n                         mode=\"lines+markers\", name=\"Ryanair (€40 cost)\",\n                         line=dict(color=\"#2D5F4E\", width=3)))\nfig.add_trace(go.Scatter(x=margins[\"ticket_price\"], y=margins[\"Competitor_margin\"],\n                         mode=\"lines+markers\", name=\"Competitor (€60 cost)\",\n                         line=dict(color=\"#B45309\", width=3, dash=\"dash\")))\nfig.add_hline(y=0, line_dash=\"dot\", line_color=\"#94A3B8\")\nfig.update_layout(height=420, xaxis_title=\"Ticket price (€)\",\n                  yaxis_title=\"Margin per passenger (€)\",\n                  margin=dict(l=20, r=20, t=20, b=40),\n                  plot_bgcolor=\"rgba(0,0,0,0)\", paper_bgcolor=\"rgba(0,0,0,0)\")\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 3: Per-passenger margin at different ticket prices. The gap between the two cost bases is the resilience cushion.\n\n\n\n\nThe €20/passenger cost advantage is the headline. Equally important is the breakeven gap: Ryanair continues to clear zero at ticket prices where the competitor is loss-making. In a demand shock, that gap is strategy."
+  },
+  {
+    "objectID": "projects/list/ryanair-vuca.html#recovery-profitability---the-equation-that-matters",
+    "href": "projects/list/ryanair-vuca.html#recovery-profitability---the-equation-that-matters",
+    "title": "Ryanair Under Uncertainty - A VUCA Case Study",
+    "section": "Recovery profitability - the equation that matters",
+    "text": "Recovery profitability - the equation that matters\nThe recovery can be summarised neatly in a standard revenue decomposition:\n\\[\n\\text{Revenue} = P \\times Q \\times L\n\\]\nWhere \\(P\\) is average ticket price, \\(Q\\) is seat capacity deployed, and \\(L\\) is load factor. Ryanair’s post-shock play was to expand \\(Q\\) aggressively while competitors could not, accept modest pressure on \\(P\\), and rely on operational discipline to keep \\(L\\) above 90 %."
+  },
+  {
+    "objectID": "projects/list/ryanair-vuca.html#footnotes-and-attribution",
+    "href": "projects/list/ryanair-vuca.html#footnotes-and-attribution",
+    "title": "Ryanair Under Uncertainty - A VUCA Case Study",
+    "section": "Footnotes and attribution",
+    "text": "Footnotes and attribution\n\nPassenger and revenue figures are drawn from Ryanair’s annual reports for FY2018–FY2023.1\nIndustry-exit data (Flybe, Alitalia, Norwegian) is drawn from publicly reported news coverage.\nThis was a group project. My contribution was the pre-COVID environmental analysis and the Five Forces scoring, drafted and refined with my teammates.\n\n\n\n\n\n\n\nBack to Projects."
+  },
+  {
+    "objectID": "projects/list/ryanair-vuca.html#footnotes",
+    "href": "projects/list/ryanair-vuca.html#footnotes",
+    "title": "Ryanair Under Uncertainty - A VUCA Case Study",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRyanair Holdings PLC, Annual Reports, 2018–2023.↩︎"
+  }
+]
